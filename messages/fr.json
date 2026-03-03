@@ -1,0 +1,727 @@
+{
+  "HomePage": {
+    "title": "Bienvenue sur Cloza",
+    "subtitle": "La marketplace B2B premium pour la mode",
+    "newCollections": "Nouvelles Collections AH25 Disponibles",
+    "heroTitleLine1": "Centralisez vos achats",
+    "heroTitleHighlight": "Développez vos ventes ",
+    "heroDescription": "Découvrez notre univers de produits exclusifs et de marques variées.",
+    "explore": "Parcourir les Collections",
+    "apply": "Se connecter",
+    "readyTitle": "Prêt à sublimer votre offre ?",
+    "applyMembership": "Rejoindre la Marketplace"
+  },
+  "TrustBar": {
+    "featuredIn": "Ils nous font confiance"
+  },
+  "Header": {
+    "signIn": "Se connecter",
+    "account": "Mon Compte",
+    "buyerSpace": "Espace Acheteur",
+    "vendorSpace": "Espace Vendeur",
+    "searchPlaceholder": "Rechercher une marque, un produit..."
+  },
+  "Footer": {
+    "about": "À propos",
+    "ourStory": "Notre Histoire",
+    "careers": "Carrières",
+    "sustainability": "Développement Durable",
+    "press": "Presse",
+    "support": "Support",
+    "helpCenter": "Centre d'Aide",
+    "shipping": "Livraison & Retours",
+    "terms": "Conditions Grossiste",
+    "contact": "Contactez-nous",
+    "legal": "Légal",
+    "termsOfService": "Conditions d'Utilisation",
+    "policyRefund": "Politique de Remboursement",
+    "policyShipping": "Politique d'Expédition",
+    "policyTerms": "Conditions Générales (CGUV)",
+    "privacy": "Politique de Confidentialité",
+    "cookies": "Politique des Cookies",
+    "assistance": "Assistance",
+    "contactUs": "Contactez-nous",
+    "notice": "Mentions Légales",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "Adresse email",
+    "description": "Découvrez notre marketplace B2B. Centralisez vos achats, développez vos ventes.",
+    "rights": "Tous droits réservés."
+  },
+  "Contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Notre équipe vous répond sous 24h.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "successTitle": "Message envoyé !",
+      "successDesc": "Nous reviendrons vers vous très prochainement.",
+      "errorTitle": "Erreur",
+      "errorDesc": "Une erreur est survenue lors de l'envoi."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone"
+    }
+  },
+  "HowItWorks": {
+    "title": "Comment ça marche ?",
+    "retailerTab": "Pour les clients",
+    "brandTab": "Pour les vendeurs",
+    "retailer": {
+      "step1Title": "Découvrez",
+      "step1Desc": "Accédez à une sélection exclusive de marques européennes.",
+      "step2Title": "Commandez",
+      "step2Desc": "Faibles minimums de commande et paniers multi-marques.",
+      "step3Title": "Financez",
+      "step3Desc": "Achetez maintenant, payez à 60 jours sans frais."
+    },
+    "brand": {
+      "step1Title": "Exposez",
+      "step1Desc": "Créez votre showroom digital en quelques clics.",
+      "step2Title": "Vendez",
+      "step2Desc": "Touchez instantanément des milliers de revendeurs qualifiés.",
+      "step3Title": "Encaissez",
+      "step3Desc": "Paiement garanti à la livraison."
+    }
+  },
+  "Testimonials": {
+    "title": "La confiance des vendeurs ",
+    "subtitle": "Rejoignez des milliers de détaillants indépendants qui font confiance à Cloza pour développer leur activité.",
+    "sophieQuote": "Cloza a complètement transformé ma façon de m'approvisionner. Les délais de paiement à 60 jours changent la donne pour ma trésorerie.",
+    "marcQuote": "J'ai trouvé des marques uniques que mes clients adorent, avec des marges introuvables ailleurs.",
+    "elenaQuote": "La facilité de paiement à 60 jours  m'a permis de tester de nouvelles catégories sans prendre de gros risques. Essentiel pour tout détaillant en croissance."
+  },
+  "ActiveDeals": {
+    "opportunitiesTitle": "Opportunités à ne pas manquer",
+    "trendingTitle": "Produits Tendance",
+    "code": "Code"
+  },
+  "FeaturedBrands": {
+    "title": "Marques ",
+    "subtitle": "Accès direct aux marques européennes indépendantes."
+  },
+  "Categories": {
+    "New products": "Nouveautés",
+    "Beauty & Wellness": "Beauté & Bien-être",
+    "Facial Care": "Soins Visage",
+    "Cleansers & Toners": "Nettoyants & Toniques",
+    "Moisturizers & Creams": "Hydratants & Crèmes",
+    "Masks & Treatments": "Masques & Traitements",
+    "Body Care": "Soins Corps",
+    "Body Lotions & Oils": "Lotions & Huiles Corporelles",
+    "Scrubs & Exfoliants": "Gommages & Exfoliants",
+    "Hand & Foot Care": "Soins Mains & Pieds",
+    "Hair": "Cheveux",
+    "Shampoos & Conditioners": "Shampoings & Après-shampoings",
+    "Hair Treatments & Masks": "Soins & Masques Capillaires",
+    "Styling Products & Tools": "Coiffants & Accessoires",
+    "Makeup": "Maquillage",
+    "Face Makeup": "Teint",
+    "Eye Makeup": "Yeux",
+    "Lips": "Lèvres",
+    "Fragrance": "Parfums",
+    "Perfumes & Eau de Parfum": "Parfums & Eau de Parfum",
+    "Body Mists & Sprays": "Brumes Corporelles",
+    "Home Fragrances": "Parfums d'Intérieur",
+    "Beauty accessory": "Accessoires Beauté",
+    "Makeup Brushes & Tools": "Pinceaux & Outils",
+    "Skincare Tools": "Outils Soins",
+    "Hair Accessories": "Accessoires Cheveux",
+    "Beauty & personnal care": "Hygiène & Soins",
+    "Hygiene Essentials": "Essentiels Hygiène",
+    "Oral Care": "Soins Bucco-dentaires",
+    "Wellness Products": "Produits Bien-être",
+    "Natural & Organic Products": "Naturel & Bio",
+    "Organic Skincare": "Soins Bio",
+    "Natural Haircare": "Soins Cheveux Naturels",
+    "Eco-friendly Beauty Accessories": "Accessoires Éco-responsables",
+    "Food & Beverages": "Épicerie Fine",
+    "Savory Grocery": "Épicerie Salée",
+    "Pasta, Rice & Grains": "Pâtes, Riz & Céréales",
+    "Sauces, Condiments & Seasonings": "Sauces & Condiments",
+    "Oils & Vinegars": "Huiles & Vinaigres",
+    "Sweet Grocery": "Épicerie Sucrée",
+    "Biscuits, Chocolate & Sweets": "Biscuits & Chocolats",
+    "Jams, Honey & Spreads": "Confitures & Miel",
+    "Breakfast & Baking Essentials": "Petit Déjeuner",
+    "World Food": "Saveurs du Monde",
+    "African & Caribbean": "Afrique & Caraïbes",
+    "Asian & Oriental": "Asie & Orient",
+    "Mediterranean & European": "Méditerranée & Europe",
+    "Salty Snacks": "Snacks Salés",
+    "Chips, Nuts & Crackers": "Chips & Biscuits Apéritif",
+    "Sweet Snacks": "Snacks Sucrés",
+    "Pastries, Cakes & Biscuits": "Pâtisseries & Gâteaux",
+    "Energy & Protein Snacks": "Snacks Énergie & Protéines",
+    "Energy Bars, Protein Cookies, Dried Fruits": "Barres & Fruits Secs",
+    "Non-Alcoholic": "Sans Alcool",
+    "Juices & Smoothies": "Jus & Smoothies",
+    "Coffee, Tea & Infusions": "Café, Thé & Infusions",
+    "Functional & Energy Drinks": "Boissons Fonctionnelles",
+    "Alcoholic": "Vins & Spiritueux",
+    "Wine, Beer & Spirits": "Vins, Bières & Spiritueux",
+    "Healthy Drinks": "Boissons Healthy",
+    "Plant-Based Milks, Kombucha & Fermented Drinks": "Laits Végétaux & Kombucha",
+    "Fine Grocery": "Produits d'Exception",
+    "Truffle, Foie Gras & Delicatessen": "Truffe & Foie Gras",
+    "Specialty Oils & Vinegars": "Huiles d'Exception",
+    "Artisan Chocolates & Sweets": "Chocolats Artisanaux",
+    "Gift & Seasonal": "Cadeaux & Saisonnier",
+    "Gourmet Gift Boxes": "Coffrets Gourmands",
+    "Seasonal & Limited Editions": "Éditions Limitées",
+    "Bulk Ingredients": "Vrac",
+    "Flour, Sugar, Spices": "Farine, Sucre, Épices",
+    "Professional Drinks": "Boissons Pro",
+    "Coffee Beans, Syrups, Barista Supplies": "Café en Grains & Sirops",
+    "Catering Essentials": "Traiteur",
+    "Ready Meals & Tableware": "Plats Préparés & Arts de la Table",
+    "Textile": "Textile & Mode",
+    "Women": "Femme",
+    "Tops": "Hauts",
+    "Bottoms": "Bas",
+    "Sets & Jumpsuits": "Ensembles & Combinaisons",
+    "Jackets & Coats": "Vestes & Manteaux",
+    "Lingerie, Swimwear & Underwear": "Lingerie & Bain",
+    "Pyjamas & Homewear": "Pyjamas & Homewear",
+    "Sportswear / Activewear": "Sportswear",
+    "Footwear": "Chaussures",
+    "Men": "Homme",
+    "Suits & Blazers": "Costumes & Blazers",
+    "Sets / Matching Outfits": "Ensembles",
+    "Coats & Jackets": "Manteaux & Blousons",
+    "Underwear & Socks": "Sous-vêtements",
+    "Kids": "Enfant",
+    "Girl": "Fille",
+    "Boy": "Garçon",
+    "Baby": "Bébé",
+    "Shoes and Slippers": "Chaussures & Chaussons",
+    "Accessories": "Accessoires",
+    "Bags and accessories": "Sacs & Accessoires",
+    "Bags": "Sacs",
+    "Belts": "Ceintures",
+    "Ties": "Cravates",
+    "Scarves": "Écharpes & Foulards",
+    "Gloves": "Gants",
+    "Hats": "Chapeaux & Bonnets",
+    "ShopBy": "Acheter par catégorie",
+    "ViewAll": "Tout voir",
+    "Explore": "Découvrir"
+  },
+  "Common": {
+    "back": "Retour",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "update": "Mettre à jour",
+    "create": "Créer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "actions": "Actions",
+    "status": "Statut",
+    "date": "Date",
+    "amount": "Montant",
+    "total": "Total",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "success": "Succès",
+    "orderId": "N° Commande",
+    "customer": "Client",
+    "company": "Entreprise",
+    "sku": "SKU",
+    "stock": "Stock",
+    "price": "Prix",
+    "priceHt": "Prix HT",
+    "category": "Catégorie",
+    "description": "Description",
+    "name": "Nom",
+    "all": "Tous",
+    "none": "Aucun",
+    "priority": "Priorité",
+    "high": "Haute",
+    "medium": "Moyenne",
+    "low": "Basse"
+  },
+  "Registration": {
+    "titleVendor": "Espace Vendeur",
+    "titleRetailer": "Créer un compte",
+    "descriptionVendor": "Rejoignez Cloza pour vendre aux professionnels. Validation de votre entreprise requise.",
+    "descriptionRetailer": "Inscrivez-vous pour accéder aux collections exclusives.",
+    "step1": "Étape 1 : Informations personnelles",
+    "step2": "Étape 2 : Informations professionnelles",
+    "name": "Nom complet",
+    "email": "Email professionnel",
+    "phoneNumber": "Numéro de téléphone",
+    "phonePrefix": "Préfixe",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "vatNumber": "Numéro de TVA Intracommunautaire",
+    "companyName": "Raison sociale",
+    "termsText": "J'ai pris connaissance des <terms>conditions de vente</terms> et des <policies>politiques de confidentialité</policies>.",
+    "termsLink": "conditions de vente",
+    "policiesLink": "politiques de confidentialité",
+    "submit": "Confirmer l'inscription",
+    "next": "Suivant",
+    "back": "Retour",
+    "loading": "Création du compte...",
+    "success": "Compte créé avec succès !",
+    "alreadyHaveAccount": "Déjà un compte ?",
+    "signIn": "Se connecter"
+  },
+  "Vendor": {
+    "dashboard": {
+      "title": "Tableau de bord",
+      "welcome": "Bon retour, {name}",
+      "totalRevenue": "Chiffre d'affaires total",
+      "pendingOrders": "Commandes en attente",
+      "shippedOrders": "Commandes expédiées",
+      "activeDisputes": "Litiges actifs",
+      "recentOrders": "Commandes récentes",
+      "exportReports": "Exporter les rapports",
+      "integrations": "Intégrations",
+      "manageProducts": "Gérer mes produits",
+      "addProduct": "Ajouter un produit",
+      "signOut": "Se déconnecter",
+      "revenueGrowth": "+{value}% depuis le mois dernier",
+      "requiresAttention": "Nécessite votre attention",
+      "thisMonth": "Ce mois-ci",
+      "keepItZero": "Gardez-le à zéro !",
+      "manage": "Gérer"
+    },
+    "products": {
+      "title": "Mes Produits",
+      "backToDashboard": "Retour au dashboard",
+      "backToList": "Retour aux produits",
+      "addNew": "Ajouter un produit",
+      "importCsv": "Importer CSV",
+      "searchPlaceholder": "Rechercher un produit...",
+      "allStatus": "Tous les statuts",
+      "statusActive": "Actif",
+      "statusDraft": "Brouillon",
+      "statusOutOfStock": "Rupture",
+      "statusArchived": "Archivé",
+      "noProductsFound": "Aucun produit trouvé.",
+      "image": "Image",
+      "name": "Nom",
+      "priceHt": "Prix HT",
+      "bulkActions": {
+        "selected": "{count} produit(s) sélectionnés",
+        "allSelected": "Tous les {count} produits sont sélectionnés",
+        "selectAll": "Sélectionner les {count} produits de ma boutique",
+        "cancelSelection": "Annuler la sélection",
+        "activate": "Activer",
+        "draft": "Brouillon",
+        "outOfStock": "Rupture",
+        "archive": "Archiver",
+        "delete": "Supprimer",
+        "confirmDelete": "Êtes-vous sûr de vouloir supprimer définitivement ces produits ? Cette action est irréversible.",
+        "successUpdate": "{count} produits mis à jour",
+        "successDelete": "{count} produits supprimés",
+        "successUpdateAll": "Tous les {count} produits ont été mis à jour"
+      },
+      "form": {
+        "tabs": {
+          "details": "Détails",
+          "media": "Média",
+          "pricing": "Prix & Stock",
+          "shipping": "Livraison"
+        },
+        "labels": {
+          "name": "Nom du produit",
+          "description": "Description",
+          "category": "Catégorie",
+          "status": "Statut",
+          "material": "Matière / Composition",
+          "origin": "Pays d'origine",
+          "images": "Images du produit",
+          "priceHt": "Prix HT (€)",
+          "discountPrice": "Prix remisé HT (€)",
+          "taxRate": "TVA (%)",
+          "stock": "Stock disponible",
+          "weight": "Poids (grammes)",
+          "length": "Longueur (cm)",
+          "width": "Largeur (cm)",
+          "height": "Hauteur (cm)"
+        },
+        "placeholders": {
+          "name": "Robe d'été fleurie",
+          "description": "Description détaillée du produit...",
+          "selectCategory": "Choisir une catégorie",
+          "selectStatus": "Choisir un statut",
+          "material": "100% Coton bio",
+          "origin": "France",
+          "weight": "500"
+        },
+        "descriptions": {
+          "images": "La première image sera utilisée comme couverture par défaut.",
+          "weight": "Utilisé pour le calcul des frais de port."
+        },
+        "messages": {
+          "successCreate": "Produit créé",
+          "successUpdate": "Produit mis à jour",
+          "saving": "Enregistrement..."
+        }
+      },
+      "import": {
+        "title": "Import de produits en masse",
+        "description": "Importez un fichier CSV pour créer ou mettre à jour vos produits.",
+        "mappingDescription": "Associez les colonnes de votre fichier aux champs Cloza.",
+        "categoryMappingDescription": "Associez les catégories du fichier aux catégories Cloza.",
+        "previewDescription": "Vérifiez les données avant l'import.",
+        "resultDescription": "Résultat de l'importation.",
+        "dropzone": {
+          "title": "Glissez votre fichier CSV ici",
+          "subtitle": "ou cliquez pour parcourir",
+          "limits": "Max 10MB • CSV uniquement"
+        },
+        "mapping": {
+          "title": "Correspondance des colonnes",
+          "requiredFields": "Champs Requis",
+          "optionalFields": "Champs Optionnels",
+          "selectColumn": "Sélectionner une colonne...",
+          "ignore": "-- Ignorer --",
+          "validate": "Valider le mapping"
+        },
+        "categoryMapping": {
+          "title": "Correspondance des catégories",
+          "csvCategory": "Catégorie CSV",
+          "clozaCategory": "Catégorie Cloza",
+          "select": "Choisir..."
+        },
+        "preview": {
+          "readyToImport": "{count} produits prêts à être importés",
+          "previewTitle": "Aperçu des 3 premiers produits",
+          "launch": "Lancer l'import"
+        },
+        "result": {
+          "imported": "Produits importés",
+          "errors": "Erreurs rencontrées",
+          "errorReport": "Rapport d'erreurs",
+          "row": "Ligne {row}",
+          "viewProducts": "Voir les produits"
+        }
+      }
+    }
+  },
+  "Admin": {
+    "dashboard": {
+      "title": "Aperçu de la Marketplace",
+      "subtitle": "Performance commerciale et tâches opérationnelles.",
+      "stats": {
+        "totalGmv": "GMV Totale",
+        "commission": "Commission",
+        "pendingKyb": "KYB en attente",
+        "openDisputes": "Litiges ouverts"
+      },
+      "descriptions": {
+        "gmvGrowth": "+{value}% depuis le mois dernier",
+        "manageFees": "Gérer les frais de plateforme",
+        "awaitingVerification": "En attente de vérification",
+        "needsAttention": "Nécessite votre attention"
+      },
+      "recentOrders": "Commandes récentes",
+      "latestTransactions": "Dernières transactions sur la plateforme.",
+      "viewAll": "Voir tout",
+      "noOrders": "Aucune commande trouvée.",
+      "operationalTasks": "Tâches Opérationnelles",
+      "actionsAttention": "Actions nécessitant votre attention.",
+      "tasks": {
+        "verifyKyb": "Vérifier KYB en attente",
+        "resolveDisputes": "Résoudre les litiges",
+        "updateFeatured": "Mettre à jour les marques vedettes"
+      },
+      "itemsPending": "{count} éléments en attente"
+    },
+    "kyb": {
+      "title": "Validations KYB",
+      "subtitle": "Examiner les documents légaux des nouveaux détaillants.",
+      "requestsPending": "{count} demandes en attente",
+      "queueTitle": "File de vérification",
+      "queuePriority": "Priorité : les plus anciennes d'abord.",
+      "emptyQueue": "La file de vérification est vide. Beau travail !",
+      "review": "Examiner"
+    },
+    "sidebar": {
+      "dashboard": "Tableau de bord",
+      "crm": "CRM Prospects",
+      "users": "Utilisateurs",
+      "kyb": "Validations KYB",
+      "cms": "CMS / Accueil",
+      "finance": "Finance",
+      "disputes": "Litiges",
+      "settings": "Paramètres",
+      "storefront": "Boutique",
+      "signOut": "Déconnexion",
+      "controlCenter": "Centre de Contrôle des Opérations",
+      "superAdmin": "Super Admin"
+    },
+    "users": {
+      "title": "Gestion des utilisateurs",
+      "subtitle": "Voir et gérer tous les participants de la plateforme.",
+      "addUser": "Ajouter un utilisateur",
+      "directory": {
+        "title": "Annuaire de la plateforme",
+        "description": "{count} utilisateurs enregistrés au total.",
+        "searchPlaceholder": "Rechercher email, nom, entreprise...",
+        "columns": {
+          "userAccount": "Utilisateur / Compte",
+          "role": "Rôle",
+          "kybStatus": "Statut KYB",
+          "joined": "Inscrit le",
+          "actions": "Actions"
+        },
+        "noUsers": "Aucun utilisateur trouvé.",
+        "anonymous": "Anonyme",
+        "userActions": "Actions utilisateur",
+        "viewDetails": "Voir détails",
+        "banUser": "Bannir l'utilisateur",
+        "impersonate": "Imiter l'utilisateur"
+      },
+      "details": {
+        "header": {
+          "kybApproved": "KYB APPROUVÉ"
+        },
+        "tabs": {
+          "identity": "Identité",
+          "finance": "Finance",
+          "logistics": "Logistique",
+          "products": "Produits",
+          "settings": "Paramètres"
+        },
+        "identity": {
+          "corporateTitle": "Identité Corporative",
+          "corporateDesc": "Informations légales et paramètres de marque.",
+          "userTitle": "Profil Utilisateur",
+          "company": "Entreprise :",
+          "siret": "SIRET :",
+          "vat": "TVA :",
+          "promoteHint": "Promouvoir en vendeur pour modifier ces champs.",
+          "fullName": "Nom complet",
+          "email": "Email",
+          "kybStatus": "Statut KYB",
+          "joined": "Inscrit le"
+        },
+        "finance": {
+          "baseCommission": "Commission de base",
+          "baseCommissionDesc": "Remplacement de la valeur par défaut globale.",
+          "bankingTitle": "Informations Bancaires",
+          "bankingDesc": "Détails pour virements SEPA."
+        },
+        "logistics": {
+          "shippingTitle": "Configuration Livraison",
+          "shippingDesc": "Transporteurs par défaut et paramètres de retour."
+        },
+        "products": {
+          "catalogTitle": "Catalogue Produits",
+          "catalogDesc": "Aperçu des articles listés par ce vendeur.",
+          "advancedManager": "Voir le gestionnaire avancé"
+        },
+        "settings": {
+          "accountTitle": "Paramètres du compte",
+          "accountDesc": "Gérer les préférences générales du compte.",
+          "comingSoon": "Paramètres supplémentaires bientôt disponibles."
+        }
+      }
+    },
+    "vendors": {
+      "commissionForm": {
+        "overrideGlobal": "Remplacer la commission globale",
+        "customRate": "Taux personnalisé (%)",
+        "validPercentageError": "Veuillez entrer un pourcentage valide (0-100)",
+        "successUpdate": "Taux de commission vendeur mis à jour",
+        "errorUpdate": "Échec de la mise à jour du taux",
+        "usingGlobal": "Utilise le taux global :",
+        "saving": "Enregistrement...",
+        "saveConfig": "Enregistrer la configuration"
+      }
+    },
+    "finance": {
+      "title": "Tableau de Bord Financier",
+      "noData": "Aucune donnée disponible.",
+      "limitNotice": "Affichage des {count} dernières transactions.",
+      "columns": {
+        "date": "Date",
+        "vendor": "Vendeur",
+        "order": "Commande #",
+        "totalAmount": "Montant Total",
+        "commission": "Commission",
+        "netPayout": "Net Vendeur",
+        "payment": "Paiement",
+        "status": "Statut Payout"
+      },
+      "status": {
+        "paid": "Payé",
+        "pending": "En attente"
+      },
+      "actions": {
+        "markPaid": "Marquer Payé",
+        "undo": "Annuler"
+      },
+      "dialog": {
+        "title": "Confirmer le paiement",
+        "description": "Voulez-vous vraiment marquer cette commande comme payée pour {vendor} ? Cette action est irréversible en conditions réelles.",
+        "confirm": "Confirmer le paiement",
+        "cancel": "Annuler"
+      },
+      "notifications": {
+        "markedPaid": "Marqué comme payé",
+        "paymentCancelled": "Paiement annulé",
+        "error": "Une erreur est survenue lors de la mise à jour"
+      },
+      "exceptions": {
+        "title": "Exceptions par catégorie",
+        "description": "Remplacer le taux global pour des catégories spécifiques.",
+        "categoryPlaceholder": "Catégorie",
+        "ratePlaceholder": "%",
+        "addError": "Veuillez sélectionner une catégorie et un taux",
+        "successAdd": "Exception ajoutée",
+        "errorAdd": "Échec de l'ajout de l'exception",
+        "successRemove": "Exception supprimée",
+        "errorRemove": "Échec de la suppression de l'exception",
+        "noExceptions": "Aucune exception définie."
+      },
+      "payouts": {
+        "title": "Contrôle des versements",
+        "description": "Gérer la fréquence des virements et les suspensions.",
+        "scheduleLabel": "Fréquence des virements",
+        "schedules": {
+          "daily": "Quotidien (J+1)",
+          "weekly": "Hebdomadaire (Lundis)",
+          "monthly": "Mensuel (le 1er)"
+        },
+        "activeLabel": "Versements Actifs",
+        "suspendedLabel": "VERSEMENTS SUSPENDUS",
+        "reasonPlaceholder": "Raison de la suspension (requis pour audit)...",
+        "reasonError": "Une raison est requise lors de la suspension des versements.",
+        "successUpdate": "Paramètres de versement mis à jour",
+        "errorUpdate": "Échec de la mise à jour des paramètres",
+        "saving": "Enregistrement...",
+        "saveConfig": "Enregistrer la configuration"
+      }
+    },
+    "cms": {
+      "title": "Gestion du Contenu (CMS)",
+      "subtitle": "Gérez les promotions et les vendeurs mis en avant sur la page d'accueil.",
+      "promotions": {
+        "title": "Promotions & Deals",
+        "description": "Cartes promotionnelles affichées dans la section découverte.",
+        "addNew": "Nouveau Deal",
+        "edit": "Modifier le Deal",
+        "delete": "Supprimer le Deal",
+        "deleteConfirm": "Êtes-vous sûr de vouloir supprimer ce deal ? Cette action est irréversible.",
+        "form": {
+          "addNew": "Nouveau Deal",
+          "edit": "Modifier le Deal",
+          "title": "Titre",
+          "description": "Description",
+          "discount": "Remise",
+          "code": "Code Promo (optionnel)",
+          "expiresAt": "Date d'expiration (optionnelle)",
+          "selectDate": "Choisir une date",
+          "submitCreate": "Créer le Deal",
+          "submitUpdate": "Mettre à jour le Deal",
+          "successCreate": "Deal créé avec succès",
+          "successUpdate": "Deal mis à jour avec succès",
+          "successDelete": "Deal supprimé avec succès"
+        },
+        "columns": {
+          "title": "Titre",
+          "discount": "Remise",
+          "code": "Code",
+          "expires": "Expire le",
+          "status": "Statut"
+        },
+        "status": {
+          "active": "Actif",
+          "expired": "Expiré"
+        }
+      },
+      "vendors": {
+        "title": "Vendeurs à la Une",
+        "manage": "Sélectionnez jusqu'à 8 marques à mettre en avant sur la page d'accueil.",
+        "columns": {
+          "brand": "Marque",
+          "slug": "Slug",
+          "featured": "Mis en avant"
+        },
+        "selected": "Sélectionné : {count} / 8",
+        "warningLimit": "Attention : Trop de marques mises en avant",
+        "successToggle": "Statut du vendeur mis à jour",
+        "errorToggle": "Échec de la mise à jour"
+      },
+      "products": {
+        "title": "Produits Tendances",
+        "manage": "Sélectionnez les produits à mettre en avant dans la rubrique 'Produits Tendances' sur la page d'accueil.",
+        "columns": {
+          "product": "Produit",
+          "vendor": "Vendeur",
+          "trending": "Tendance"
+        },
+        "selected": "Sélectionné : {count}",
+        "successToggle": "Statut du produit mis à jour",
+        "errorToggle": "Échec de la mise à jour"
+      }
+    }
+  },
+  "Orders": {
+    "detail": {
+      "title": "Commande #{id}",
+      "placedOn": "Passée le {date} à {time}",
+      "printPackingSlip": "Imprimer le bon de livraison",
+      "markAsShipped": "Marquer comme expédiée",
+      "itemsTitle": "Articles de la commande",
+      "timeline": "Historique",
+      "orderPlaced": "Commande passée",
+      "paymentConfirmed": "Paiement confirmé",
+      "shipped": "Expédiée",
+      "tracking": "Suivi : {number}",
+      "customer": "Client",
+      "shippingAddress": "Adresse de livraison",
+      "needHelp": "Besoin d'aide ?",
+      "helpDesc": "Si vous avez un problème avec cette commande, contactez le support Cloza immédiatement.",
+      "openDispute": "Ouvrir un litige",
+      "subtotal": "Sous-total",
+      "commission": "Commission plateforme (15%)",
+      "netPayout": "Versement Net",
+      "unknownCompany": "Entreprise inconnue",
+      "product": "Produit",
+      "price": "Prix",
+      "qty": "Qté"
+    }
+  },
+  "Catalog": {
+    "sidebar": {
+      "collections": "Collections",
+      "sortBy": "Trier par",
+      "availability": "Disponibilité",
+      "inStockOnly": "En stock uniquement",
+      "brands": "Marques",
+      "noBrands": "Aucune marque disponible",
+      "priceRange": "Gamme de prix"
+    },
+    "sort": {
+      "newest": "Nouveautés",
+      "priceAsc": "Prix : Croissant",
+      "priceDesc": "Prix : Décroissant",
+      "alphaAsc": "Nom : A à Z",
+      "alphaDesc": "Nom : Z à A"
+    }
+  },
+  "AdminComponents": {
+    "impersonation": {
+      "active": "Vous agissez actuellement en tant que {name} ({email})",
+      "exit": "Quitter le mode Fantôme",
+      "successRevert": "Session Admin restaurée",
+      "errorRevert": "Échec de la restauration de la session"
+    },
+    "financial": {
+      "totalSales": "Ventes Totales (GMV)",
+      "totalCommission": "Commission Totale",
+      "fromOrders": "Sur {count} commandes",
+      "platformRevenue": "Revenus plateforme"
+    }
+  }
+}

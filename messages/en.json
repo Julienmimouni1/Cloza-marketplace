@@ -1,0 +1,709 @@
+{
+  "HomePage": {
+    "title": "Welcome to Cloza",
+    "subtitle": "The premium B2B fashion marketplace",
+    "newCollections": "New Collections FW25 Available",
+    "heroTitleLine1": "Centralize Your Purchasing",
+    "heroTitleHighlight": "Grow Your Sales ",
+    "heroDescription": "Discover our universe of exclusive products and curated brands.",
+    "explore": "Browse Collections",
+    "apply": "Log In",
+    "readyTitle": "Ready to elevate your selection?",
+    "applyMembership": "Join the Marketplace"
+  },
+  "TrustBar": {
+    "featuredIn": "Trusted by Industry Leaders"
+  },
+  "Header": {
+    "signIn": "Log In",
+    "account": "My Account",
+    "buyerSpace": "Buyer Space",
+    "vendorSpace": "Vendor Space",
+    "searchPlaceholder": "Search brands, products..."
+  },
+  "Footer": {
+    "about": "About",
+    "ourStory": "Our Story",
+    "careers": "Careers",
+    "sustainability": "Sustainability",
+    "press": "Press",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "shipping": "Shipping & Returns",
+    "terms": "Wholesale Terms",
+    "contact": "Contact Us",
+    "legal": "Legal",
+    "termsOfService": "Terms of Service",
+    "policyRefund": "Refund Policy",
+    "policyShipping": "Shipping Policy",
+    "policyTerms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "assistance": "Assistance",
+    "contactUs": "Contact Us",
+    "notice": "Legal Notices",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "E-mail address",
+    "description": "Discover our B2B marketplace. Centralize your purchases, develop your sales.",
+    "rights": "All rights reserved."
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question? Our team will get back to you within 24h.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent!",
+      "successDesc": "We will get back to you shortly.",
+      "errorTitle": "Error",
+      "errorDesc": "An error occurred while sending the message."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone"
+    }
+  },
+  "HowItWorks": {
+    "title": "How it Works",
+    "retailerTab": "For Buyers",
+    "brandTab": "For Sellers",
+    "retailer": {
+      "step1Title": "Discover",
+      "step1Desc": "Access an exclusive selection of European brands.",
+      "step2Title": "Order",
+      "step2Desc": "Low minimums and multi-brand carts.",
+      "step3Title": "Finance",
+      "step3Desc": "Buy now, pay in 60 days with 0% interest."
+    },
+    "brand": {
+      "step1Title": "Showcase",
+      "step1Desc": "Create your digital showroom in clicks.",
+      "step2Title": "Sell",
+      "step2Desc": "Instantly reach thousands of qualified retailers.",
+      "step3Title": "Get Paid",
+      "step3Desc": "Guaranteed payment upon delivery. We take the risk."
+    }
+  },
+  "Testimonials": {
+    "title": "Trusted by Retailers",
+    "subtitle": "Join thousands of independent retailers who rely on Cloza to grow their business.",
+    "sophieQuote": "Cloza has completely transformed how I source for my boutique. The net-60 terms are a game-changer for my cash flow.",
+    "marcQuote": "The curation is exceptional. I found unique brands that my customers love, with margins I couldn't find elsewhere.",
+    "elenaQuote": "Low minimums allowed me to test new categories without taking big risks. Essential for any growing retailer."
+  },
+  "ActiveDeals": {
+    "opportunitiesTitle": "Active Opportunities",
+    "trendingTitle": "Trending Products",
+    "code": "Code"
+  },
+  "FeaturedBrands": {
+    "title": "Curated Brands",
+    "subtitle": "Direct access to independent European brands."
+  },
+  "Categories": {
+    "New products": "New Arrivals",
+    "Beauty & Wellness": "Beauty & Wellness",
+    "Facial Care": "Facial Care",
+    "Cleansers & Toners": "Cleansers & Toners",
+    "Moisturizers & Creams": "Moisturizers & Creams",
+    "Masks & Treatments": "Masks & Treatments",
+    "Body Care": "Body Care",
+    "Body Lotions & Oils": "Body Lotions & Oils",
+    "Scrubs & Exfoliants": "Scrubs & Exfoliants",
+    "Hand & Foot Care": "Hand & Foot Care",
+    "Hair": "Hair",
+    "Shampoos & Conditioners": "Shampoos & Conditioners",
+    "Hair Treatments & Masks": "Hair Treatments & Masks",
+    "Styling Products & Tools": "Styling Products & Tools",
+    "Makeup": "Makeup",
+    "Face Makeup": "Face Makeup",
+    "Eye Makeup": "Eye Makeup",
+    "Lips": "Lips",
+    "Fragrance": "Fragrance",
+    "Perfumes & Eau de Parfum": "Perfumes & Eau de Parfum",
+    "Body Mists & Sprays": "Body Mists & Sprays",
+    "Home Fragrances": "Home Fragrances",
+    "Beauty accessory": "Beauty accessory",
+    "Makeup Brushes & Tools": "Makeup Brushes & Tools",
+    "Skincare Tools": "Skincare Tools",
+    "Hair Accessories": "Hair Accessories",
+    "Beauty & personnal care": "Beauty & personnal care",
+    "Hygiene Essentials": "Hygiene Essentials",
+    "Oral Care": "Oral Care",
+    "Wellness Products": "Wellness Products",
+    "Natural & Organic Products": "Natural & Organic Products",
+    "Organic Skincare": "Organic Skincare",
+    "Natural Haircare": "Natural Haircare",
+    "Eco-friendly Beauty Accessories": "Eco-friendly Beauty Accessories",
+    "Food & Beverages": "Food & Beverages",
+    "Savory Grocery": "Savory Grocery",
+    "Pasta, Rice & Grains": "Pasta, Rice & Grains",
+    "Sauces, Condiments & Seasonings": "Sauces, Condiments & Seasonings",
+    "Oils & Vinegars": "Oils & Vinegars",
+    "Sweet Grocery": "Sweet Grocery",
+    "Biscuits, Chocolate & Sweets": "Biscuits, Chocolate & Sweets",
+    "Jams, Honey & Spreads": "Jams, Honey & Spreads",
+    "Breakfast & Baking Essentials": "Breakfast & Baking Essentials",
+    "World Food": "World Food",
+    "African & Caribbean": "African & Caribbean",
+    "Asian & Oriental": "Asian & Oriental",
+    "Mediterranean & European": "Mediterranean & European",
+    "Salty Snacks": "Salty Snacks",
+    "Chips, Nuts & Crackers": "Chips, Nuts & Crackers",
+    "Sweet Snacks": "Sweet Snacks",
+    "Pastries, Cakes & Biscuits": "Pastries, Cakes & Biscuits",
+    "Energy & Protein Snacks": "Energy & Protein Snacks",
+    "Energy Bars, Protein Cookies, Dried Fruits": "Energy Bars, Protein Cookies, Dried Fruits",
+    "Non-Alcoholic": "Non-Alcoholic",
+    "Juices & Smoothies": "Juices & Smoothies",
+    "Coffee, Tea & Infusions": "Coffee, Tea & Infusions",
+    "Functional & Energy Drinks": "Functional & Energy Drinks",
+    "Alcoholic": "Alcoholic",
+    "Wine, Beer & Spirits": "Wine, Beer & Spirits",
+    "Healthy Drinks": "Healthy Drinks",
+    "Plant-Based Milks, Kombucha & Fermented Drinks": "Plant-Based Milks, Kombucha & Fermented Drinks",
+    "Fine Grocery": "Fine Grocery",
+    "Truffle, Foie Gras & Delicatessen": "Truffle, Foie Gras & Delicatessen",
+    "Specialty Oils & Vinegars": "Specialty Oils & Vinegars",
+    "Artisan Chocolates & Sweets": "Artisan Chocolates & Sweets",
+    "Gift & Seasonal": "Gift & Seasonal",
+    "Gourmet Gift Boxes": "Gourmet Gift Boxes",
+    "Seasonal & Limited Editions": "Seasonal & Limited Editions",
+    "Bulk Ingredients": "Bulk Ingredients",
+    "Flour, Sugar, Spices": "Flour, Sugar, Spices",
+    "Professional Drinks": "Professional Drinks",
+    "Coffee Beans, Syrups, Barista Supplies": "Coffee Beans, Syrups, Barista Supplies",
+    "Catering Essentials": "Catering Essentials",
+    "Ready Meals & Tableware": "Ready Meals & Tableware",
+    "Textile": "Textile",
+    "Women": "Women",
+    "Tops": "Tops",
+    "Bottoms": "Bottoms",
+    "Sets & Jumpsuits": "Sets & Jumpsuits",
+    "Jackets & Coats": "Jackets & Coats",
+    "Lingerie, Swimwear & Underwear": "Lingerie, Swimwear & Underwear",
+    "Pyjamas & Homewear": "Pyjamas & Homewear",
+    "Sportswear / Activewear": "Sportswear / Activewear",
+    "Footwear": "Footwear",
+    "Men": "Men",
+    "Suits & Blazers": "Suits & Blazers",
+    "Sets / Matching Outfits": "Sets / Matching Outfits",
+    "Coats & Jackets": "Coats & Jackets",
+    "Underwear & Socks": "Underwear & Socks",
+    "Kids": "Kids",
+    "Girl": "Girl",
+    "Boy": "Boy",
+    "Baby": "Baby",
+    "Shoes and Slippers": "Shoes and Slippers",
+    "Accessories": "Accessories",
+    "Bags and accessories": "Bags and accessories",
+    "Bags": "Bags",
+    "Belts": "Belts",
+    "Ties": "Ties",
+    "Scarves": "Scarves",
+    "Gloves": "Gloves",
+    "Hats": "Hats",
+    "ShopBy": "Shop by category",
+    "ViewAll": "View All",
+    "Explore": "Explore"
+  },
+  "Common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "update": "Update",
+    "create": "Create",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "actions": "Actions",
+    "status": "Status",
+    "date": "Date",
+    "amount": "Amount",
+    "total": "Total",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "orderId": "Order ID",
+    "customer": "Customer",
+    "company": "Company",
+    "sku": "SKU",
+    "stock": "Stock",
+    "price": "Price",
+    "priceHt": "Price Excl. Tax",
+    "category": "Category",
+    "description": "Description",
+    "name": "Name",
+    "all": "All",
+    "none": "None",
+    "priority": "Priority",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "Registration": {
+    "titleVendor": "Vendor Space",
+    "titleRetailer": "Create an account",
+    "descriptionVendor": "Join Cloza to sell to professionals. Business validation required.",
+    "descriptionRetailer": "Sign up to access exclusive collections.",
+    "step1": "Step 1: Personal Information",
+    "step2": "Step 2: Professional Information",
+    "name": "Full Name",
+    "email": "Business Email",
+    "phoneNumber": "Phone Number",
+    "phonePrefix": "Prefix",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "vatNumber": "Intra-community VAT Number",
+    "companyName": "Company Name",
+    "termsText": "I have read and agree to the <terms>terms of sale</terms> and <policies>privacy policies</policies>.",
+    "termsLink": "terms of sale",
+    "policiesLink": "privacy policies",
+    "submit": "Confirm Registration",
+    "next": "Next",
+    "back": "Back",
+    "loading": "Creating account...",
+    "success": "Account created successfully!",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Log In"
+  },
+  "Vendor": {
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome back, {name}",
+      "totalRevenue": "Total Revenue",
+      "pendingOrders": "Pending Orders",
+      "shippedOrders": "Shipped Orders",
+      "activeDisputes": "Active Disputes",
+      "recentOrders": "Recent Orders",
+      "exportReports": "Export Reports",
+      "integrations": "Integrations",
+      "manageProducts": "Manage Products",
+      "addProduct": "Add Product",
+      "signOut": "Sign Out",
+      "revenueGrowth": "+{value}% from last month",
+      "requiresAttention": "Requires attention",
+      "thisMonth": "This month",
+      "keepItZero": "Keep it at zero!",
+      "manage": "Manage"
+    },
+    "products": {
+      "title": "My Products",
+      "backToDashboard": "Back to dashboard",
+      "backToList": "Back to products",
+      "addNew": "Add Product",
+      "importCsv": "Import CSV",
+      "searchPlaceholder": "Search products...",
+      "allStatus": "All status",
+      "statusActive": "Active",
+      "statusDraft": "Draft",
+      "statusOutOfStock": "Out of Stock",
+      "statusArchived": "Archived",
+      "noProductsFound": "No products found.",
+      "image": "Image",
+      "name": "Name",
+      "priceHt": "Price Excl. Tax",
+      "bulkActions": {
+        "selected": "{count} product(s) selected",
+        "allSelected": "All {count} products are selected",
+        "selectAll": "Select all {count} products in my shop",
+        "cancelSelection": "Cancel selection",
+        "activate": "Activate",
+        "draft": "Draft",
+        "outOfStock": "Out of Stock",
+        "archive": "Archive",
+        "delete": "Delete",
+        "confirmDelete": "Are you sure you want to permanently delete these products? This action is irreversible.",
+        "successUpdate": "{count} products updated",
+        "successDelete": "{count} products deleted",
+        "successUpdateAll": "All {count} products have been updated"
+      },
+      "form": {
+        "tabs": {
+          "details": "Details",
+          "media": "Media",
+          "pricing": "Pricing & Stock",
+          "shipping": "Shipping"
+        },
+        "labels": {
+          "name": "Product Name",
+          "description": "Description",
+          "category": "Category",
+          "status": "Status",
+          "material": "Material / Composition",
+          "origin": "Country of Origin",
+          "images": "Product Images",
+          "priceHt": "Price Excl. Tax (€)",
+          "discountPrice": "Discounted Price Excl. Tax (€)",
+          "taxRate": "VAT (%)",
+          "stock": "Available Stock",
+          "weight": "Weight (grams)",
+          "length": "Length (cm)",
+          "width": "Width (cm)",
+          "height": "Height (cm)"
+        },
+        "placeholders": {
+          "name": "Flowy Summer Dress",
+          "description": "Detailed product description...",
+          "selectCategory": "Choose a category",
+          "selectStatus": "Choose a status",
+          "material": "100% Organic Cotton",
+          "origin": "France",
+          "weight": "500"
+        },
+        "descriptions": {
+          "images": "The first image will be used as the default cover.",
+          "weight": "Used for shipping cost calculation."
+        },
+        "messages": {
+          "successCreate": "Product created",
+          "successUpdate": "Product updated",
+          "saving": "Saving..."
+        }
+      },
+      "import": {
+        "title": "Bulk Product Import",
+        "description": "Import a CSV file to create or update your products.",
+        "mappingDescription": "Associate your file columns with Cloza fields.",
+        "categoryMappingDescription": "Associate file categories with Cloza categories.",
+        "previewDescription": "Verify data before import.",
+        "resultDescription": "Import result.",
+        "dropzone": {
+          "title": "Drag your CSV file here",
+          "subtitle": "or click to browse",
+          "limits": "Max 10MB • CSV only"
+        },
+        "mapping": {
+          "title": "Column Mapping",
+          "requiredFields": "Required Fields",
+          "optionalFields": "Optional Fields",
+          "selectColumn": "Select a column...",
+          "ignore": "-- Ignore --",
+          "validate": "Validate Mapping"
+        },
+        "categoryMapping": {
+          "title": "Category Mapping",
+          "csvCategory": "CSV Category",
+          "clozaCategory": "Cloza Category",
+          "select": "Choose..."
+        },
+        "preview": {
+          "readyToImport": "{count} products ready to be imported",
+          "previewTitle": "Preview of first 3 products",
+          "launch": "Launch Import"
+        },
+        "result": {
+          "imported": "Products imported",
+          "errors": "Errors encountered",
+          "errorReport": "Error Report",
+          "row": "Row {row}",
+          "viewProducts": "View Products"
+        }
+      }
+    }
+  },
+  "Admin": {
+    "dashboard": {
+      "title": "Marketplace Overview",
+      "subtitle": "Business performance and operational tasks.",
+      "stats": {
+        "totalGmv": "Total GMV",
+        "commission": "Commission",
+        "pendingKyb": "Pending KYB",
+        "openDisputes": "Open Disputes"
+      },
+      "descriptions": {
+        "gmvGrowth": "+{value}% from last month",
+        "manageFees": "Manage platform fees",
+        "awaitingVerification": "Awaiting verification",
+        "needsAttention": "Needs attention"
+      },
+      "recentOrders": "Recent Orders",
+      "latestTransactions": "Latest transactions on the platform.",
+      "viewAll": "View All",
+      "noOrders": "No orders found.",
+      "operationalTasks": "Operational Tasks",
+      "actionsAttention": "Actions requiring your attention.",
+      "tasks": {
+        "verifyKyb": "Verify Pending KYB",
+        "resolveDisputes": "Resolve Disputes",
+        "updateFeatured": "Update Featured Brands"
+      },
+      "itemsPending": "{count} items pending"
+    },
+    "kyb": {
+      "title": "KYB Validations",
+      "subtitle": "Review legal documents from new retailers.",
+      "requestsPending": "{count} requests pending",
+      "queueTitle": "Verification Queue",
+      "queuePriority": "Priority: Oldest submissions first.",
+      "emptyQueue": "Verification queue is empty. Good job!",
+      "review": "Review"
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "crm": "Lead CRM",
+      "users": "Users",
+      "kyb": "KYB Validations",
+      "cms": "CMS / Homepage",
+      "finance": "Finance",
+      "disputes": "Disputes",
+      "settings": "Settings",
+      "storefront": "Storefront",
+      "signOut": "Sign Out",
+      "controlCenter": "Operations Control Center",
+      "superAdmin": "Super Admin"
+    },
+    "users": {
+      "title": "User Management",
+      "subtitle": "View and manage all platform participants.",
+      "addUser": "Add User",
+      "directory": {
+        "title": "Platform Directory",
+        "description": "{count} total users registered.",
+        "searchPlaceholder": "Search email, name, company...",
+        "columns": {
+          "userAccount": "User / Account",
+          "role": "Role",
+          "kybStatus": "KYB Status",
+          "joined": "Joined",
+          "actions": "Actions"
+        },
+        "noUsers": "No users found.",
+        "anonymous": "Anonymous",
+        "userActions": "User Actions",
+        "viewDetails": "View Details",
+        "banUser": "Ban User",
+        "impersonate": "Impersonate User"
+      },
+      "details": {
+        "header": {
+          "kybApproved": "KYB APPROVED"
+        },
+        "tabs": {
+          "identity": "Identity",
+          "finance": "Finance",
+          "logistics": "Logistics",
+          "products": "Products",
+          "settings": "Settings"
+        },
+        "identity": {
+          "corporateTitle": "Corporate Identity",
+          "corporateDesc": "Legal information and brand settings.",
+          "userTitle": "User Profile",
+          "company": "Company:",
+          "siret": "SIRET:",
+          "vat": "VAT:",
+          "promoteHint": "Promote to vendor to edit these fields.",
+          "fullName": "Full Name",
+          "email": "Email",
+          "kybStatus": "KYB Status",
+          "joined": "Joined"
+        },
+        "finance": {
+          "baseCommission": "Base Commission",
+          "baseCommissionDesc": "Global default override.",
+          "bankingTitle": "Banking Information",
+          "bankingDesc": "SEPA transfer details."
+        },
+        "logistics": {
+          "shippingTitle": "Shipping Configuration",
+          "shippingDesc": "Default carriers and return settings."
+        },
+        "products": {
+          "catalogTitle": "Product Catalog",
+          "catalogDesc": "Overview of items listed by this vendor.",
+          "advancedManager": "View Advanced Manager"
+        },
+        "settings": {
+          "accountTitle": "Account Settings",
+          "accountDesc": "Manage general account preferences.",
+          "comingSoon": "Additional settings coming soon."
+        }
+      }
+    },
+    "vendors": {
+      "commissionForm": {
+        "overrideGlobal": "Override Global Commission",
+        "customRate": "Custom Rate (%)",
+        "validPercentageError": "Please enter a valid percentage (0-100)",
+        "successUpdate": "Vendor commission rate updated",
+        "errorUpdate": "Failed to update rate",
+        "usingGlobal": "Using Global Rate:",
+        "saving": "Saving...",
+        "saveConfig": "Save Configuration"
+      }
+    },
+    "finance": {
+      "title": "Financial Dashboard",
+      "noData": "No data available.",
+      "limitNotice": "Showing the last {count} transactions.",
+      "columns": {
+        "date": "Date",
+        "vendor": "Vendor",
+        "order": "Order #",
+        "totalAmount": "Total Amount",
+        "commission": "Commission",
+        "netPayout": "Net Payout",
+        "payment": "Payment",
+        "status": "Payout Status"
+      },
+      "status": {
+        "paid": "Paid",
+        "pending": "Pending"
+      },
+      "actions": {
+        "markPaid": "Mark Paid",
+        "undo": "Undo"
+      },
+      "dialog": {
+        "title": "Confirm Payout",
+        "description": "Are you sure you want to mark this order as paid for {vendor}? This action is irreversible in live conditions.",
+        "confirm": "Confirm Payment",
+        "cancel": "Cancel"
+      },
+      "notifications": {
+        "markedPaid": "Marked as paid",
+        "paymentCancelled": "Payment cancelled",
+        "error": "An error occurred during update"
+      },
+      "exceptions": {
+        "title": "Category Exceptions",
+        "description": "Override global rate for specific product categories.",
+        "categoryPlaceholder": "Category",
+        "ratePlaceholder": "%",
+        "addError": "Please select a category and rate",
+        "successAdd": "Exception added",
+        "errorAdd": "Failed to add exception",
+        "successRemove": "Exception removed",
+        "errorRemove": "Failed to remove exception",
+        "noExceptions": "No exceptions defined."
+      },
+      "payouts": {
+        "title": "Payout Controls",
+        "description": "Manage transfer frequency and suspensions.",
+        "scheduleLabel": "Transfer Schedule",
+        "schedules": {
+          "daily": "Daily (T+1)",
+          "weekly": "Weekly (Mondays)",
+          "monthly": "Monthly (1st)"
+        },
+        "activeLabel": "Payouts Active",
+        "suspendedLabel": "PAYOUTS SUSPENDED",
+        "reasonPlaceholder": "Reason for suspension (required for audit)...",
+        "reasonError": "A reason is required when suspending payouts.",
+        "successUpdate": "Payout settings updated",
+        "errorUpdate": "Failed to update settings",
+        "saving": "Saving...",
+        "saveConfig": "Save Configuration"
+      }
+    },
+    "cms": {
+      "title": "Content Management (CMS)",
+      "subtitle": "Manage promotions and featured vendors on the homepage.",
+      "promotions": {
+        "title": "Promotions & Deals",
+        "description": "Deal cards displayed in the discovery section.",
+        "addNew": "New Deal",
+        "edit": "Edit Deal",
+        "delete": "Delete Deal",
+        "deleteConfirm": "Are you sure you want to delete this deal? This action is irreversible.",
+        "form": {
+          "addNew": "New Deal",
+          "edit": "Edit Deal",
+          "title": "Title",
+          "description": "Description",
+          "discount": "Discount",
+          "code": "Promo Code (optional)",
+          "expiresAt": "Expiry Date (optional)",
+          "selectDate": "Pick a date",
+          "submitCreate": "Create Deal",
+          "submitUpdate": "Update Deal",
+          "successCreate": "Deal created successfully",
+          "successUpdate": "Deal updated successfully",
+          "successDelete": "Deal deleted successfully"
+        },
+        "columns": {
+          "title": "Title",
+          "discount": "Discount",
+          "code": "Code",
+          "expires": "Expires on",
+          "status": "Status"
+        },
+        "status": {
+          "active": "Active",
+          "expired": "Expired"
+        }
+      },
+      "vendors": {
+        "title": "Featured Vendors",
+        "manage": "Select up to 8 brands to highlight on the homepage.",
+        "columns": {
+          "brand": "Brand",
+          "slug": "Slug",
+          "featured": "Featured"
+        },
+        "selected": "Selected: {count} / 8",
+        "warningLimit": "Warning: Too many brands featured",
+        "successToggle": "Brand featured status updated",
+        "errorToggle": "Failed to update status"
+      },
+      "products": {
+        "title": "Trending Products",
+        "manage": "Select products to highlight in the 'Trending Products' section on the homepage.",
+        "columns": {
+          "product": "Product",
+          "vendor": "Vendor",
+          "trending": "Trending"
+        },
+        "selected": "Selected: {count}",
+        "successToggle": "Product trending status updated",
+        "errorToggle": "Failed to update status"
+      }
+    }
+  },
+  "Orders": {
+    "detail": {
+      "title": "Order #{id}",
+      "placedOn": "Placed on {date} at {time}",
+      "printPackingSlip": "Print Packing Slip",
+      "markAsShipped": "Mark as Shipped",
+      "itemsTitle": "Order Items",
+      "timeline": "Timeline",
+      "orderPlaced": "Order Placed",
+      "paymentConfirmed": "Payment Confirmed",
+      "shipped": "Shipped",
+      "tracking": "Tracking: {number}",
+      "customer": "Customer",
+      "shippingAddress": "Shipping Address",
+      "needHelp": "Need Help?",
+      "helpDesc": "If you have an issue with this order, contact Cloza support immediately.",
+      "openDispute": "Open Dispute Ticket",
+      "subtotal": "Subtotal",
+      "commission": "Platform Commission (15%)",
+      "netPayout": "Net Payout",
+      "unknownCompany": "Unknown Company",
+      "product": "Product",
+      "price": "Price",
+      "qty": "Qty"
+    }
+  },
+  "AdminComponents": {
+    "impersonation": {
+      "active": "You are currently impersonating {name} ({email})",
+      "exit": "Exit Ghost Mode",
+      "successRevert": "Reverted to Admin session",
+      "errorRevert": "Failed to revert session"
+    },
+    "financial": {
+      "totalSales": "Total Sales (GMV)",
+      "totalCommission": "Total Commission",
+      "fromOrders": "From {count} orders",
+      "platformRevenue": "Platform revenue"
+    }
+  }
+}

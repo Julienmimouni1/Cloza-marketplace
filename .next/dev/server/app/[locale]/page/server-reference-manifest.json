@@ -1,0 +1,170 @@
+{
+  "node": {
+    "604ae2bd87eafb2f4ae54680b71ea26af5aed1ab65": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "validateStockAction",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "validateStockAction",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+    },
+    "60dedb2230628605cfbf39b02a9edddfcbb4279f68": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "updateCartItemAction",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "updateCartItemAction",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+    },
+    "40cbcd7e034685e83d9d15fe661e994cd807cdc61e": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "removeFromCartAction",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "removeFromCartAction",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+    },
+    "40cfff30da0cd522a0bf754ef741ddc5ac93a48eef": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "syncCart",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "syncCart",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+    },
+    "00a9d676109d180228dbec7f4447a66d56c6872a86": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "getCart",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "getCart",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts"
+    },
+    "4080c3497a90316cc1ecb9b141ab8653893b925b6e": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "sendContactEmail",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "sendContactEmail",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts"
+    },
+    "006dec2cc5666d78929ec08ba366c30946bca6c24d": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "getActivePromotions",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "rsc"
+      },
+      "exportedName": "getActivePromotions",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+    },
+    "007ae98cda5e77ed13dbb52affea1e1fa414d83271": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "getTrendingProducts",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "rsc"
+      },
+      "exportedName": "getTrendingProducts",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+    },
+    "0087640f2d5e84ce013b842c3f042bac6b1b63ac7a": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "getFeaturedVendors",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "rsc"
+      },
+      "exportedName": "getFeaturedVendors",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+    },
+    "4007e0aba54238e727aed0bffca6cfa64503e8aaeb": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "getProductBySlug",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "rsc"
+      },
+      "exportedName": "getProductBySlug",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+    },
+    "40d1ebef5af5a582b305c09ea56aa09aa5e682ab93": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "getProducts",
+          "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "rsc"
+      },
+      "exportedName": "getProducts",
+      "filename": "OneDrive/Desktop/Application/Frontend_Cloza_with-BMAD/src/features/catalog/actions.ts"
+    }
+  },
+  "edge": {}
+}

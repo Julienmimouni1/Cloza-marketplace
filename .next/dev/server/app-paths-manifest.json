@@ -1,0 +1,8 @@
+{
+  "/[locale]/(dashboard)/vendor/integrations/page": "app/[locale]/(dashboard)/vendor/integrations/page.js",
+  "/[locale]/(dashboard)/vendor/page": "app/[locale]/(dashboard)/vendor/page.js",
+  "/[locale]/catalog/page": "app/[locale]/catalog/page.js",
+  "/[locale]/dashboard/page": "app/[locale]/dashboard/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
+}

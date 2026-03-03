@@ -1,0 +1,18 @@
+import NextAuth from "next-auth";
+import { authConfig } from "./auth.config";
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./navigation";
+
+const { auth } = NextAuth(authConfig);
+
+const intlMiddleware = createMiddleware(routing);
+
+export default auth((req) => {
+  return intlMiddleware(req);
+});
+
+export const config = {
+  // Skip all paths that should not be internationalized
+  matcher: ['/((?!api|_next|.*\\..*).*)']
+};
+

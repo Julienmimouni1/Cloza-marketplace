@@ -1,0 +1,452 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/client"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Vendor {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String?
+  logoUrl     String?
+  isFeatured  Boolean   @default(false)
+  products    Product[]
+  subOrders   SubOrder[]
+  userId      String?   @unique
+  user        User?     @relation(fields: [userId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now()) @updatedAt
+  integrations ExternalIntegration[]
+  commissionRate Int?     // Commission rate in basis points (e.g., 1500 = 15.00%). Overrides global default if set.
+  commissionHistory CommissionHistory[]
+  commissionExceptions CommissionException[]
+  payoutSettings PayoutSettings?
+  billingInfo Json?
+  shippingInfo Json?
+}
+
+model CommissionException {
+  id        String   @id @default(cuid())
+  vendorId  String
+  vendor    Vendor   @relation(fields: [vendorId], references: [id])
+  category  Category // Enum defined below
+  rate      Int      // Basis points (e.g. 1000 = 10%)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([vendorId, category]) // One rule per category per vendor
+}
+
+model PayoutSettings {
+  id              String   @id @default(cuid())
+  vendorId        String   @unique
+  vendor          Vendor   @relation(fields: [vendorId], references: [id])
+  schedule        String   @default("MONTHLY") // DAILY, WEEKLY, MONTHLY
+  payoutsEnabled  Boolean  @default(true)
+  suspensionReason String?
+  updatedAt       DateTime @updatedAt
+}
+
+model SystemSetting {
+  key         String   @id
+  value       String   // Value stored as string (e.g., "1500" for global commission)
+  description String?
+  updatedAt   DateTime @updatedAt
+}
+
+model CommissionHistory {
+  id        String   @id @default(cuid())
+  vendorId  String?
+  vendor    Vendor?  @relation(fields: [vendorId], references: [id])
+  oldRate   Int?
+  newRate   Int?
+  changedBy String   // Admin User ID
+  reason    String?
+  createdAt DateTime @default(now())
+}
+
+model Promotion {
+  id          String    @id @default(cuid())
+  title       String
+  description String
+  discount    String
+  code        String?
+  isActive    Boolean   @default(true)
+  expiresAt   DateTime?
+}
+
+enum Category {
+  Textile
+  Beauty
+  Food
+}
+
+enum ProductStatus {
+  ACTIVE
+  DRAFT
+  ARCHIVED
+  OUT_OF_STOCK
+}
+
+enum ProductSource {
+  MANUAL
+  CSV
+  SHOPIFY
+  WOOCOMMERCE
+}
+
+model Product {
+  id          String     @id @default(cuid())
+  name        String
+  slug        String     @unique
+  description String
+  priceHt     Int
+  stock       Int
+  sku         String     @unique
+  category    Category
+  subCategory String?
+  leafCategory String?
+  image       String     @default("https://placehold.co/600x400")
+  status      ProductStatus @default(DRAFT)
+  vendorId    String
+  vendor      Vendor     @relation(fields: [vendorId], references: [id])
+  cartItems   CartItem[]
+  orderItems  OrderItem[]
+
+  // Source tracking for imports
+  source      ProductSource @default(MANUAL)
+  externalId  String?       // ID in the external system (Shopify ID, etc.)
+
+  // New fields for Story 6.1
+  discountPrice Int?
+  taxRate       Float?
+  weight        Int?       // in grams
+  height        Float?     // in cm
+  width         Float?     // in cm
+  length        Float?     // in cm
+  material      String?
+  origin        String?
+  tags          String[]
+  images        ProductImage[]
+  isTrending    Boolean    @default(false)
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now()) @updatedAt
+}
+
+// Auth & Cart Models
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String? // Hashed
+  role          String    @default("RETAILER") // GUEST, RETAILER, ADMIN
+  companyName   String?
+  siret         String?
+  vatNumber     String?
+  address       String?
+  city          String?
+  zipCode       String?
+  phoneNumber   String?
+  kybStatus     String    @default("PENDING") // PENDING, IN_REVIEW, APPROVED, REJECTED
+  termsAcceptedAt DateTime?
+  
+  // Financial Profile (BNPL)
+  creditLimit        Int       @default(500000) // in cents, default €5,000.00
+  outstandingBalance Int       @default(0)      // in cents
+
+  documents     KybDocument[]
+  accounts      Account[]
+  sessions      Session[]
+  cart          Cart?
+  orders        Order[]
+  vendor        Vendor?
+  disputesInitiated Dispute[]
+  disputeMessages   DisputeMessage[]
+  
+  // CRM Link
+  lead          Lead?
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+// CRM Models
+
+enum LeadStatus {
+  NEW          // Nouveau prospect
+  CONTACTED    // Premier contact établi
+  QUALIFIED    // Intérêt confirmé
+  PROPOSAL     // En négociation / Envoi de doc
+  CONVERTED    // Devenu User ou Vendor
+  LOST         // Abandonné
+}
+
+enum LeadType {
+  RETAILER
+  VENDOR
+}
+
+model Lead {
+  id              String      @id @default(cuid())
+  type            LeadType    @default(RETAILER)
+  status          LeadStatus  @default(NEW)
+  companyName     String
+  contactName     String?
+  email           String      @unique
+  phoneNumber     String?
+  website         String?
+  
+  // Pipeline & Segmentation
+  source          String?     // LinkedIn, Salon, Referral...
+  priority        Int         @default(1) // 1 (Bas) à 3 (Haut)
+  tags            String[]    // ex: ["Luxe", "Eco-friendly"]
+  
+  // Data for conversion
+  convertedUserId String?     @unique
+  user            User?       @relation(fields: [convertedUserId], references: [id])
+  
+  // Future WhatsApp link
+  whatsappId      String?     @unique
+  
+  activities      Activity[]
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
+model Activity {
+  id          String    @id @default(cuid())
+  leadId      String
+  lead        Lead      @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  type        String    // "EMAIL", "CALL", "NOTE", "WHATSAPP", "STATUS_CHANGE"
+  content     String    @db.Text
+  performedBy String    // ID de l'Admin qui a fait l'action
+  createdAt   DateTime  @default(now())
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String     @unique
+  user      User       @relation(fields: [userId], references: [id])
+  items     CartItem[]
+  updatedAt DateTime   @updatedAt
+}
+
+model CartItem {
+  id        String   @id @default(cuid())
+  cartId    String
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int
+  updatedAt DateTime @updatedAt
+
+  @@unique([cartId, productId])
+}
+
+enum KybDocumentType {
+  KBIS
+  IDENTITY
+}
+
+enum KybDocumentStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model KybDocument {
+  id           String            @id @default(cuid())
+  userId       String
+  user         User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type         KybDocumentType
+  status       KybDocumentStatus @default(PENDING)
+  filePath     String
+  encryptionIv String
+  mimeType     String
+  originalName String
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+}
+
+// Order & Dispute System
+
+model Order {
+  id              String      @id @default(cuid())
+  buyerId         String
+  buyer           User        @relation(fields: [buyerId], references: [id])
+  totalAmount     Int         // Grand total in cents
+  currency        String      @default("EUR")
+  status          String      @default("PENDING") // PENDING, PAID, PARTIALLY_FULFILLED, COMPLETED
+  paymentIntentId String?     // Stripe Payment Intent
+  paymentMethod   String      // "CARD", "KLARNA_BNPL"
+  createdAt       DateTime    @default(now())
+  
+  subOrders       SubOrder[]
+}
+
+enum PayoutStatus {
+  PENDING
+  PAID
+}
+
+model SubOrder {
+  id              String      @id @default(cuid())
+  parentOrderId   String
+  parentOrder     Order       @relation(fields: [parentOrderId], references: [id])
+  vendorId        String
+  vendor          Vendor      @relation(fields: [vendorId], references: [id])
+  status          String      @default("PENDING_CONFIRMATION") // WAITING_VENDOR, CONFIRMED, SHIPPED, DELIVERED
+  totalAmount     Int         // Subtotal for this vendor
+  commissionAmount Int        // Calculated platform fee
+  commissionRateApplied Int   @default(1500) // Rate used for calculation in basis points (snapshot)
+  
+  // Payout Tracking
+  payoutStatus    PayoutStatus @default(PENDING)
+  payoutDate      DateTime?
+
+  // Shipment Details
+  trackingNumber   String?
+  carrier          String?
+  estimatedDelivery DateTime?
+  
+  items           OrderItem[]
+  disputes        Dispute[]
+
+  @@index([payoutStatus])
+}
+
+model OrderItem {
+  id              String      @id @default(cuid())
+  subOrderId      String
+  subOrder        SubOrder    @relation(fields: [subOrderId], references: [id])
+  productId       String
+  product         Product     @relation(fields: [productId], references: [id])
+  quantity        Int
+  priceAtPurchase Int         // Snapshot of price
+}
+
+enum DisputeReason {
+  ITEM_MISSING
+  ITEM_DAMAGED
+  NOT_AS_DESCRIBED
+  LATE_DELIVERY
+  OTHER
+}
+
+enum DisputeStatus {
+  OPEN                // Created by Buyer
+  UNDER_NEGOTIATION   // Vendor replied
+  ESCALATED           // Admin intervention requested
+  RESOLVED_REFUND     // Refund issued
+  RESOLVED_DISMISSED  // Dispute rejected
+}
+
+model Dispute {
+  id            String        @id @default(cuid())
+  subOrderId    String
+  subOrder      SubOrder      @relation(fields: [subOrderId], references: [id])
+  initiatorId   String
+  initiator     User          @relation(fields: [initiatorId], references: [id])
+  
+  reason        DisputeReason
+  status        DisputeStatus @default(OPEN)
+  description   String
+  adminNotes    String?
+  resolution    String?       // Text explaining the outcome
+  
+  evidence      DisputeEvidence[]
+  messages      DisputeMessage[]
+  
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+model DisputeEvidence {
+  id          String   @id @default(cuid())
+  disputeId   String
+  dispute     Dispute  @relation(fields: [disputeId], references: [id])
+  url         String
+  fileType    String   // "IMAGE", "PDF"
+  uploadedAt  DateTime @default(now())
+}
+
+model DisputeMessage {
+  id          String   @id @default(cuid())
+  disputeId   String
+  dispute     Dispute  @relation(fields: [disputeId], references: [id])
+  senderId    String
+  sender      User     @relation(fields: [senderId], references: [id])
+  content     String
+  sentAt      DateTime @default(now())
+}
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  order     Int      @default(0)
+  isMain    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+enum IntegrationType {
+  SHOPIFY
+  WOOCOMMERCE
+  GENERIC_CSV
+}
+
+model ExternalIntegration {
+  id          String   @id @default(cuid())
+  vendorId    String
+  vendor      Vendor   @relation(fields: [vendorId], references: [id])
+  type        IntegrationType
+  config      Json     // Encrypted API keys, URLs, etc.
+  lastSync    DateTime?
+  status      String   @default("ACTIVE") // ACTIVE, ERROR, PAUSED
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
