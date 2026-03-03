@@ -11,7 +11,10 @@ const prisma = new PrismaClient({ adapter })
 
 async function main() {
   console.log('👥 Seeding test users...')
-  const defaultPassword = process.env.DEFAULT_USER_PASSWORD || 'password123'
+  const defaultPassword = process.env.DEFAULT_USER_PASSWORD
+  if (!defaultPassword) {
+    throw new Error('DEFAULT_USER_PASSWORD environment variable is not set')
+  }
   const hashedPassword = await bcrypt.hash(defaultPassword, 12)
 
   const users = [
@@ -34,7 +37,7 @@ async function main() {
     })
   }
 
-  console.log('✅ 5 test users created with password "password123"')
+  console.log('✅ 5 test users created successfully')
 }
 
 main()
