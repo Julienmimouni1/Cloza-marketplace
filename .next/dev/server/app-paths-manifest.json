@@ -1,8 +1,21 @@
 {
+  "/[locale]/(admin)/admin/cms/page": "app/[locale]/(admin)/admin/cms/page.js",
+  "/[locale]/(admin)/admin/finance/page": "app/[locale]/(admin)/admin/finance/page.js",
+  "/[locale]/(admin)/admin/page": "app/[locale]/(admin)/admin/page.js",
+  "/[locale]/(admin)/admin/users/[id]/page": "app/[locale]/(admin)/admin/users/[id]/page.js",
+  "/[locale]/(admin)/admin/users/page": "app/[locale]/(admin)/admin/users/page.js",
   "/[locale]/(dashboard)/vendor/integrations/page": "app/[locale]/(dashboard)/vendor/integrations/page.js",
   "/[locale]/(dashboard)/vendor/page": "app/[locale]/(dashboard)/vendor/page.js",
+  "/[locale]/(dashboard)/vendor/products/page": "app/[locale]/(dashboard)/vendor/products/page.js",
+  "/[locale]/[...slug]/page": "app/[locale]/[...slug]/page.js",
+  "/[locale]/admin/crm/page": "app/[locale]/admin/crm/page.js",
   "/[locale]/catalog/page": "app/[locale]/catalog/page.js",
+  "/[locale]/dashboard/orders/page": "app/[locale]/dashboard/orders/page.js",
   "/[locale]/dashboard/page": "app/[locale]/dashboard/page.js",
+  "/[locale]/dashboard/payments/page": "app/[locale]/dashboard/payments/page.js",
+  "/[locale]/dashboard/settings/page": "app/[locale]/dashboard/settings/page.js",
+  "/[locale]/new-arrivals/page": "app/[locale]/new-arrivals/page.js",
   "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/products/[category]/[slug]/page": "app/[locale]/products/[category]/[slug]/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
 }

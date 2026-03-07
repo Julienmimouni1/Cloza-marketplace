@@ -692,6 +692,33 @@
       "qty": "Qty"
     }
   },
+  "Dashboard": {
+    "title": "My Account",
+    "welcome": "Welcome back, {name}",
+    "subtitle": "Here is what's happening with your store today.",
+    "signOut": "Sign Out",
+    "kybRequired": "Action Required: Complete your Business Verification (KYB) to unlock full purchasing power.",
+    "verifyNow": "Verify Now",
+    "activeShipment": "Active Shipment",
+    "noActiveShipments": "No Active Shipments",
+    "orderNumber": "Order #{id}",
+    "estimatedArrival": "Estimated Arrival",
+    "viewTracking": "View Tracking Details",
+    "startShopping": "Start Shopping",
+    "bnplBalance": "BNPL BALANCE",
+    "usedAmount": "Used Amount",
+    "availableFrom": "Available from {total}",
+    "nextPayment": "Next Payment",
+    "recentOrders": "Recent Orders",
+    "viewAll": "View All",
+    "noRecentOrders": "No recent orders found.",
+    "menu": {
+      "home": "Overview",
+      "orders": "Order History",
+      "payments": "Payments",
+      "settings": "Settings"
+    }
+  },
   "AdminComponents": {
     "impersonation": {
       "active": "You are currently impersonating {name} ({email})",

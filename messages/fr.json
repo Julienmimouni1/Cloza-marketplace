@@ -710,6 +710,33 @@
       "alphaDesc": "Nom : Z à A"
     }
   },
+  "Dashboard": {
+    "title": "Mon Espace",
+    "welcome": "Bon retour, {name}",
+    "subtitle": "Voici l'activité de votre boutique aujourd'hui.",
+    "signOut": "Se déconnecter",
+    "kybRequired": "Action requise : Complétez votre vérification d'entreprise (KYB) pour débloquer votre puissance d'achat.",
+    "verifyNow": "Vérifier maintenant",
+    "activeShipment": "Expédition active",
+    "noActiveShipments": "Aucune expédition active",
+    "orderNumber": "Commande #{id}",
+    "estimatedArrival": "Arrivée estimée",
+    "viewTracking": "Voir les détails du suivi",
+    "startShopping": "Commencer mes achats",
+    "bnplBalance": "BALANCE BNPL",
+    "usedAmount": "Montant utilisé",
+    "availableFrom": "Disponible sur {total}",
+    "nextPayment": "Prochain paiement",
+    "recentOrders": "Commandes récentes",
+    "viewAll": "Tout voir",
+    "noRecentOrders": "Aucune commande récente trouvée.",
+    "menu": {
+      "home": "Aperçu",
+      "orders": "Historique",
+      "payments": "Paiements",
+      "settings": "Paramètres"
+    }
+  },
   "AdminComponents": {
     "impersonation": {
       "active": "Vous agissez actuellement en tant que {name} ({email})",

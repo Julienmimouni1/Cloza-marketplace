@@ -1,6 +1,4 @@
 import { auth } from "@/lib/auth";
-import { redirect } from "next/navigation";
-import Link from "next/link";
 import { 
   Table, 
   TableBody, 
@@ -26,8 +24,7 @@ import {
   RotateCcw, 
   Truck, 
   MoreHorizontal, 
-  Package,
-  ChevronLeft
+  Package
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -37,19 +34,20 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/navigation";
+import { ExportButton } from "../_components/ExportButton";
+import { exportOrdersToCsv } from "@/features/dashboard/actions/export-actions";
 
 export default async function OrdersPage() {
   const session = await auth();
+  const t = await getTranslations("Dashboard");
 
-  if (!session?.user) {
-    redirect("/login");
-  }
-
-  // MOCK DATA
+  // MOCK DATA (Could be replaced by real DB call like in DashboardPage)
   const orders = [
     { 
       id: "CLZ-8821", 
-      date: "Oct 20, 2026", 
+      date: "20 Oct 2026", 
       brand: "Lumière Paris", 
       items: 12, 
       total: "€1,240.00", 
@@ -58,7 +56,7 @@ export default async function OrdersPage() {
     },
     { 
       id: "CLZ-8815", 
-      date: "Oct 12, 2026", 
+      date: "12 Oct 2026", 
       brand: "Nórdic Minimal", 
       items: 8, 
       total: "€850.00", 
@@ -67,7 +65,7 @@ export default async function OrdersPage() {
     },
     { 
       id: "CLZ-8790", 
-      date: "Sep 28, 2026", 
+      date: "28 Sep 2026", 
       brand: "Silk & Steel", 
       items: 24, 
       total: "€2,100.00", 
@@ -76,7 +74,7 @@ export default async function OrdersPage() {
     },
     { 
       id: "CLZ-8755", 
-      date: "Sep 15, 2026", 
+      date: "15 Sep 2026", 
       brand: "Lumière Paris", 
       items: 5, 
       total: "€420.00", 
@@ -85,7 +83,7 @@ export default async function OrdersPage() {
     },
     { 
       id: "CLZ-8720", 
-      date: "Aug 30, 2026", 
+      date: "30 Aoû 2026", 
       brand: "Urban Edge", 
       items: 15, 
       total: "€1,550.00", 
@@ -95,32 +93,28 @@ export default async function OrdersPage() {
   ];
 
   return (
-    <div className="container py-8 md:py-12 max-w-7xl">
+    <div className="container py-8 max-w-7xl px-4 md:px-8">
       {/* HEADER */}
-      <div className="flex flex-col gap-4 mb-8">
-        <Link 
-          href="/dashboard" 
-          className="inline-flex items-center text-sm text-zinc-500 hover:text-cloza-gold transition-colors"
-        >
-          <ChevronLeft className="h-4 w-4 mr-1" /> Back to Dashboard
-        </Link>
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <h1 className="font-serif text-3xl font-bold text-zinc-900">Order History</h1>
-            <p className="text-zinc-500 font-sans mt-1">Manage your orders, track shipments, and download invoices.</p>
-          </div>
-          <Button className="bg-cloza-gold hover:bg-amber-700 text-white rounded-none">
-            Export Order History
-          </Button>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+        <div>
+          <h2 className="font-serif text-2xl font-bold text-zinc-900">{t("menu.orders")}</h2>
+          <p className="text-zinc-500 font-sans mt-1">Gérez vos commandes, suivez vos expéditions et téléchargez vos factures.</p>
         </div>
+        <ExportButton 
+          action={exportOrdersToCsv} 
+          label="Exporter l'historique" 
+          variant="default"
+          className="bg-zinc-900 hover:bg-zinc-800 text-white rounded-none text-xs font-bold uppercase tracking-wider"
+        />
       </div>
+
 
       {/* TOOLBAR */}
       <div className="flex flex-col md:flex-row gap-4 mb-6 bg-white p-4 border border-zinc-100 shadow-sm rounded-sm">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
           <Input 
-            placeholder="Search by Order ID or Brand..." 
+            placeholder="Rechercher par ID ou Marque..." 
             className="pl-9 border-zinc-200 focus:ring-cloza-gold rounded-sm"
           />
         </div>
@@ -129,26 +123,15 @@ export default async function OrdersPage() {
             <SelectTrigger className="w-[180px] rounded-sm border-zinc-200">
               <div className="flex items-center gap-2 text-zinc-600">
                 <Filter className="h-4 w-4" />
-                <SelectValue placeholder="Status" />
+                <SelectValue placeholder="Statut" />
               </div>
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Statuses</SelectItem>
-              <SelectItem value="pending">Pending</SelectItem>
-              <SelectItem value="shipped">Shipped</SelectItem>
-              <SelectItem value="delivered">Delivered</SelectItem>
-              <SelectItem value="cancelled">Cancelled</SelectItem>
-            </SelectContent>
-          </Select>
-          
-           <Select defaultValue="newest">
-            <SelectTrigger className="w-[180px] rounded-sm border-zinc-200">
-              <SelectValue placeholder="Sort by" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="newest">Newest First</SelectItem>
-              <SelectItem value="oldest">Oldest First</SelectItem>
-              <SelectItem value="total-high">Total: High to Low</SelectItem>
+              <SelectItem value="all">Tous les statuts</SelectItem>
+              <SelectItem value="pending">En attente</SelectItem>
+              <SelectItem value="shipped">Expédié</SelectItem>
+              <SelectItem value="delivered">Livré</SelectItem>
+              <SelectItem value="cancelled">Annulé</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -159,11 +142,11 @@ export default async function OrdersPage() {
         <Table>
           <TableHeader className="bg-zinc-50/50">
             <TableRow>
-              <TableHead className="w-[120px]">Order ID</TableHead>
+              <TableHead className="w-[120px]">ID Commande</TableHead>
               <TableHead>Date</TableHead>
-              <TableHead>Brand & Items</TableHead>
+              <TableHead>Marque & Articles</TableHead>
               <TableHead className="text-right">Total</TableHead>
-              <TableHead>Status</TableHead>
+              <TableHead>Statut</TableHead>
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -179,7 +162,6 @@ export default async function OrdersPage() {
                       <div className="flex -space-x-2">
                         {order.products.slice(0, 3).map((bgClass, i) => (
                           <div key={i} className={`h-8 w-8 rounded-full border-2 border-white ${bgClass} flex items-center justify-center`}>
-                            {/* Placeholder for image */}
                           </div>
                         ))}
                         {order.items > 3 && (
@@ -188,7 +170,7 @@ export default async function OrdersPage() {
                           </div>
                         )}
                       </div>
-                      <span className="text-xs text-zinc-500">{order.items} items</span>
+                      <span className="text-xs text-zinc-500">{order.items} articles</span>
                     </div>
                   </div>
                 </TableCell>
@@ -198,8 +180,10 @@ export default async function OrdersPage() {
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-2">
-                     <Button variant="ghost" size="icon" className="h-8 w-8 hover:text-cloza-gold" title="Track Order">
-                        <Truck className="h-4 w-4" />
+                     <Button asChild variant="ghost" size="icon" className="h-8 w-8 hover:text-cloza-gold">
+                        <Link href={`/dashboard/orders/${order.id}`}>
+                           <Truck className="h-4 w-4" />
+                        </Link>
                      </Button>
                      <DropdownMenu>
                       <DropdownMenuTrigger asChild>
@@ -210,14 +194,14 @@ export default async function OrdersPage() {
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                         <DropdownMenuItem>
-                          <Download className="mr-2 h-4 w-4" /> Download Invoice
+                          <Download className="mr-2 h-4 w-4" /> Télécharger Facture
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <RotateCcw className="mr-2 h-4 w-4" /> Reorder Items
+                          <RotateCcw className="mr-2 h-4 w-4" /> Recommander
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem className="text-red-600">
-                           Report Issue
+                           Signaler un problème
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
@@ -227,12 +211,6 @@ export default async function OrdersPage() {
             ))}
           </TableBody>
         </Table>
-      </div>
-      
-      {/* PAGINATION (Simple Placeholder) */}
-      <div className="flex items-center justify-end space-x-2 py-4">
-        <Button variant="outline" size="sm" disabled className="rounded-none">Previous</Button>
-        <Button variant="outline" size="sm" className="rounded-none">Next</Button>
       </div>
     </div>
   );
@@ -254,3 +232,4 @@ function StatusBadge({ status }: { status: string }) {
     </Badge>
   );
 }
+

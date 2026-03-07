@@ -25,6 +25,7 @@ _archive
 .next 
 (_bmad-output)
 docs
+docker-compose.prod.yml
 .i18n-cache.json
 _bmad/_memory/
 public/

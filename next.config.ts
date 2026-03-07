@@ -29,6 +29,7 @@ const config: NextConfig = {
       },
     ],
   },
+  output: 'standalone',
 };
 
 export default withNextIntl(config);
