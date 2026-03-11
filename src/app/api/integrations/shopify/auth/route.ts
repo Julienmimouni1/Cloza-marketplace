@@ -14,10 +14,8 @@ export async function GET(req: NextRequest) {
   const code = searchParams.get("code");
   const state = searchParams.get("state");
 
-  // Dynamic host detection to avoid .env mismatches
-  const host = req.headers.get("host") || "localhost:3000";
-  const protocol = host.includes("localhost") ? "http" : "https";
-  const redirectUri = `${protocol}://${host}/api/integrations/shopify/auth`;
+  // Use the configured public URL as priority to avoid tunnel/proxy host mismatches
+  const redirectUri = `${HOST}/api/integrations/shopify/auth`;
 
   const cookieStore = await cookies();
 
@@ -47,6 +45,7 @@ export async function GET(req: NextRequest) {
                   client_id: SHOPIFY_API_KEY,
                   client_secret: SHOPIFY_API_SECRET,
                   code,
+                  redirect_uri: redirectUri, // Mandatory if provided in phase 1
               }),
           });
           
@@ -101,7 +100,8 @@ export async function GET(req: NextRequest) {
       
       console.log("[Shopify Auth] Redirect URI:", redirectUri);
       
-      const installUrl = `https://${shop}/admin/oauth/authorize?client_id=${SHOPIFY_API_KEY}&scope=${scope}&redirect_uri=${redirectUri}&state=${nonce}`;
+      const encodedRedirectUri = encodeURIComponent(redirectUri);
+      const installUrl = `https://${shop}/admin/oauth/authorize?client_id=${SHOPIFY_API_KEY}&scope=${scope}&redirect_uri=${encodedRedirectUri}&state=${nonce}`;
       
       return NextResponse.redirect(installUrl);
   }

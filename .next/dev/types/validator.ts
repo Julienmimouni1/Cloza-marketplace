@@ -407,6 +407,33 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../src/app/api/webhooks/shopify/gdpr/customers-data-request/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/webhooks/shopify/gdpr/customers-data-request">> = Specific
+  const handler = {} as typeof import("../../../src/app/api/webhooks/shopify/gdpr/customers-data-request/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/api/webhooks/shopify/gdpr/customers-redact/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/webhooks/shopify/gdpr/customers-redact">> = Specific
+  const handler = {} as typeof import("../../../src/app/api/webhooks/shopify/gdpr/customers-redact/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/api/webhooks/shopify/gdpr/shop-redact/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/webhooks/shopify/gdpr/shop-redact">> = Specific
+  const handler = {} as typeof import("../../../src/app/api/webhooks/shopify/gdpr/shop-redact/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/api/webhooks/shopify/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/webhooks/shopify">> = Specific
