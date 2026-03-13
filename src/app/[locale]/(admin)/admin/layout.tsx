@@ -1,5 +1,6 @@
 import { auth, signOut } from "@/lib/auth";
-import { redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
 import Link from "next/link";
 import { 
   LayoutDashboard, 
@@ -22,9 +23,10 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   const session = await auth();
+  const locale = await getLocale();
 
   if (!session?.user || session.user.role !== "ADMIN") {
-    redirect("/dashboard");
+    redirect({ href: "/dashboard", locale });
   }
 
   const t = await getTranslations("Admin.sidebar");

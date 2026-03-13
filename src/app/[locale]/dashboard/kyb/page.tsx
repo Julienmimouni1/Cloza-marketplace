@@ -1,13 +1,16 @@
 import { auth } from "@/lib/auth";
-import { redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { DocumentUploadZone } from "@/features/identity/components/DocumentUploadZone";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 export default async function KybPage() {
   const session = await auth();
+  const locale = await getLocale();
+
   if (!session?.user) {
-    redirect("/login");
+    redirect({ href: "/login", locale });
   }
 
   const documents = await prisma.kybDocument.findMany({

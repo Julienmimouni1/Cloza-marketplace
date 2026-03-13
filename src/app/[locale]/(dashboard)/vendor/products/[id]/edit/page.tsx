@@ -1,14 +1,17 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { ProductForm } from "@/features/vendor/components/ProductForm";
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export default async function EditProductPage({ params }: { params: Promise<{ id: string }> }) {
   const session = await auth();
-  if (!session?.user?.id) redirect("/login");
+  const locale = await getLocale();
+  if (!session?.user?.id) redirect({ href: "/login", locale });
 
   const { id } = await params;
 

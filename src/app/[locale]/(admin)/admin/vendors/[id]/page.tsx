@@ -1,4 +1,6 @@
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 
 interface PageProps {
@@ -7,6 +9,7 @@ interface PageProps {
 
 export default async function VendorDetailsPage({ params }: PageProps) {
   const { id } = await params;
+  const locale = await getLocale();
   
   const vendor = await prisma.vendor.findUnique({
     where: { id },
@@ -18,7 +21,7 @@ export default async function VendorDetailsPage({ params }: PageProps) {
   }
 
   if (vendor.userId) {
-    redirect(`/admin/users/${vendor.userId}`);
+    redirect({ href: `/admin/users/${vendor.userId}`, locale });
   }
 
   return (
