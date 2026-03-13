@@ -5,6 +5,8 @@ import { Pool } from 'pg';
 import { PrismaPg } from '@prisma/adapter-pg';
 import fs from 'fs';
 import path from 'path';
+import bcryptjs from 'bcryptjs';
+
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 const adapter = new PrismaPg(pool);
@@ -177,7 +179,7 @@ async function main() {
   // 1. Create Sophie
   const sophieEmail = "sophie@example.com";
   const defaultSophiePassword = process.env.SOPHIE_PASSWORD || "sophie123";
-  const hashedSophiePassword = await bcrypt.hash(defaultSophiePassword, 12);
+  const hashedSophiePassword = await bcryptjs.hash(defaultSophiePassword, 12);
   
   // Cleanup old Sophie if exists
   await prisma.user.deleteMany({ where: { email: sophieEmail } });

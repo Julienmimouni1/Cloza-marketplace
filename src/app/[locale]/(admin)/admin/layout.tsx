@@ -80,7 +80,7 @@ export default async function AdminLayout({
           <h2 className="font-sans font-bold text-sm uppercase tracking-widest text-zinc-600">{t("controlCenter")}</h2>
           <div className="flex items-center gap-6">
              <div className="text-right mr-2 hidden sm:block">
-                <p className="text-sm font-extrabold leading-none mb-1 text-black">{session.user.name}</p>
+                <p className="text-sm font-extrabold leading-none mb-1 text-black">{session?.user?.name}</p>
                 <p className="text-[11px] text-cloza-gold font-sans uppercase font-black tracking-wider">{t("superAdmin")}</p>
              </div>
              <div className="h-10 w-10 rounded-full bg-zinc-100 border border-zinc-300 flex items-center justify-center">
