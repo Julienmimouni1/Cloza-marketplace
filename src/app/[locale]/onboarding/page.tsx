@@ -1,12 +1,14 @@
 import { auth } from "@/lib/auth";
-import { redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
 import { CompanyInfoForm } from "@/features/identity/components/CompanyInfoForm";
 
 export default async function OnboardingPage() {
   const session = await auth();
+  const locale = await getLocale();
 
   if (!session?.user) {
-    redirect("/login");
+    redirect({ href: "/login", locale });
   }
 
   return (

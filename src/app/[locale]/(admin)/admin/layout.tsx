@@ -1,5 +1,6 @@
 import { auth, signOut } from "@/lib/auth";
-import { redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
 import Link from "next/link";
 import { 
   LayoutDashboard, 
@@ -30,9 +31,10 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   const session = await auth();
+  const locale = await getLocale();
 
   if (!session?.user || session.user.role !== "ADMIN") {
-    redirect("/dashboard");
+    redirect({ href: "/dashboard", locale });
   }
 
   const t = await getTranslations("Admin.sidebar");
@@ -135,7 +137,7 @@ export default async function AdminLayout({
 
           <div className="flex items-center gap-3 md:gap-6">
              <div className="text-right mr-2 hidden sm:block">
-                <p className="text-sm font-extrabold leading-none mb-1 text-black">{session.user.name}</p>
+                <p className="text-sm font-extrabold leading-none mb-1 text-black">{session?.user?.name}</p>
                 <p className="text-[11px] text-cloza-gold font-sans uppercase font-black tracking-wider">{t("superAdmin")}</p>
              </div>
              <div className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-zinc-100 border border-zinc-300 flex items-center justify-center">

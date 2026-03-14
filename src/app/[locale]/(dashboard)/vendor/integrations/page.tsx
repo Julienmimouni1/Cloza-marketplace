@@ -1,6 +1,7 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
 import { IntegrationsList } from "@/features/vendor/components/IntegrationsList";
 import { AddIntegrationDialog } from "@/features/vendor/components/AddIntegrationDialog";
 import { IntegrationStatusBanner } from "@/components/vendor/integrations/integration-status-banner";
@@ -14,7 +15,8 @@ export default async function IntegrationsPage({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const session = await auth();
-  if (!session?.user?.id) redirect("/login");
+  const locale = await getLocale();
+  if (!session?.user?.id) redirect({ href: "/login", locale });
 
   // Await searchParams before access
   const params = await searchParams;

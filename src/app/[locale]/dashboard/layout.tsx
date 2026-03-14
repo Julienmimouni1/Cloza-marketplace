@@ -1,20 +1,18 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
 import { getDashboardData } from "@/features/dashboard/actions/get-dashboard-data";
 import { DashboardNav } from "./_components/DashboardNav";
 import { CreditCard, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { getTranslations } from "next-intl/server";
 
-export default async function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
+  const locale = await getLocale(); // ← récupère la locale active
 
   if (!session?.user) {
-    redirect("/login");
+    redirect({ href: "/login", locale }); // ← objet avec locale
   }
 
   const data = await getDashboardData();

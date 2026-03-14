@@ -1,4 +1,7 @@
 "use server";
+import { getLocale } from "next-intl/server";
+import { redirect } from "@/navigation";
+
 
 import { prisma } from "@/lib/prisma";
 import { RegisterSchema, RegisterInput, companyInfoSchema, CompanyInfoInput } from "./schemas";

@@ -1,46 +1,6 @@
 {
   "app": {
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/(admin)/admin/cms/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/(admin)/admin/finance/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/(admin)/admin/kyb/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/(admin)/admin/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
     "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/(admin)/admin/users/[id]/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/(admin)/admin/users/new/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/(admin)/admin/users/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/[...slug]/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/admin/crm/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/dashboard/page": [
-      "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
-      "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
-    ],
-    "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/login/page": [
       "static/media/2a65768255d6b625-s.p.d19752fb.woff2",
       "static/media/f06bf9da926bae75-s.p.c68a79fb.woff2"
     ],

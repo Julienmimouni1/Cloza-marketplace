@@ -1,7 +1,8 @@
 import { ProductPagination } from "@/features/vendor/components/ProductPagination";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { redirect } from "next/navigation";
+import { redirect } from "@/navigation";
+import { getLocale } from "next-intl/server";
 import { ProductStatus } from "@/generated/client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -17,7 +18,8 @@ export default async function VendorProductsPage({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const session = await auth();
-  if (!session?.user?.vendorId) redirect("/register?role=VENDOR");
+  const locale = await getLocale();
+  if (!session?.user?.vendorId) redirect({ href: "/register?role=VENDOR", locale });
 
   const vendorId = session.user.vendorId;
 

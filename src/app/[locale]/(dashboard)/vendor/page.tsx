@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma';
 import { auth, signOut } from '@/lib/auth';
-import { redirect } from 'next/navigation';
+import { redirect } from '@/navigation';
+import { getLocale } from 'next-intl/server';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -51,9 +52,10 @@ async function getRecentOrders(vendorId: string) {
 
 export default async function VendorDashboardPage() {
   const session = await auth();
+  const locale = await getLocale();
 
   if (!session?.user?.vendorId) {
-    redirect('/register?role=VENDOR');
+    redirect({ href: '/register?role=VENDOR', locale });
   }
 
   const vendor = await prisma.vendor.findUnique({
