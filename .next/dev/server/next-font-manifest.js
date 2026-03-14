@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\n  \"app\": {\n    \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/app/[locale]/page\": [\n      \"static/media/2a65768255d6b625-s.p.d19752fb.woff2\",\n      \"static/media/f06bf9da926bae75-s.p.c68a79fb.woff2\"\n    ]\n  },\n  \"appUsingSizeAdjust\": true,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"
+self.__NEXT_FONT_MANIFEST="{\n  \"app\": {},\n  \"appUsingSizeAdjust\": false,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"
