@@ -40,12 +40,6 @@ const Header = async () => {
             {!session ? (
               <div className="flex items-center gap-1.5 xl:gap-3">
                 <Link
-                  href="/login"
-                  className="text-xs font-bold uppercase tracking-wider text-zinc-500 hover:text-zinc-900 px-2 transition-colors"
-                >
-                  {t('signIn')}
-                </Link>
-                <Link
                   href="/register?role=retailer"
                   className="hidden xl:flex items-center text-xs font-bold uppercase tracking-wider text-zinc-700 hover:text-zinc-900 border border-zinc-200 bg-white hover:bg-zinc-50 px-4 py-2 rounded-full transition-all whitespace-nowrap"
                 >
@@ -60,18 +54,10 @@ const Header = async () => {
               </div>
             ) : (
               <div className="flex items-center gap-1.5 xl:gap-3">
-                {((session.user as { role?: string }).role === "ADMIN") && (
-                  <Link
-                    href="/admin"
-                    className="hidden lg:flex items-center text-[10px] xl:text-xs font-bold uppercase tracking-wider text-amber-700 hover:text-amber-800 border border-amber-200 bg-amber-50 hover:bg-amber-100 px-3 xl:px-4 py-2 rounded-full transition-colors whitespace-nowrap"
-                  >
-                    Admin Panel
-                  </Link>
-                )}
                 {((session.user as { role?: string }).role === "VENDOR") && (
                   <Link
                     href="/vendor"
-                    className="hidden lg:flex items-center text-[10px] xl:text-xs font-bold uppercase tracking-wider text-zinc-700 hover:text-zinc-800 border border-zinc-200 bg-zinc-50 hover:bg-zinc-100 px-3 xl:px-4 py-2 rounded-full transition-colors whitespace-nowrap"
+                    className="hidden lg:flex items-center text-[10px] xl:text-xs font-bold uppercase tracking-wider text-amber-700 hover:text-amber-800 border border-amber-200 bg-amber-50 hover:bg-amber-100 px-3 xl:px-4 py-2 rounded-full transition-colors whitespace-nowrap"
                   >
                     {t('vendorSpace')}
                   </Link>
@@ -87,7 +73,7 @@ const Header = async () => {
 
             <LanguageSwitcher initialLocale={locale} />
             <CartIndicator />
-            <MobileNav session={session} />
+            <MobileNav />
           </div>
         </div>
 
@@ -103,4 +89,3 @@ const Header = async () => {
 };
 
 export default Header;
-
