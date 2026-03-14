@@ -42,7 +42,19 @@ export function LoginForm() {
         const result = await loginUser(data);
         
         if (result.success) {
-            router.push(callbackUrl);
+            const role = result.data.role;
+            let redirectPath = callbackUrl;
+
+            // Role-based smart redirection
+            if (role === "ADMIN") {
+                redirectPath = "/admin";
+            } else if (role === "VENDOR") {
+                redirectPath = "/vendor";
+            } else if (callbackUrl === "/dashboard" && role === "RETAILER") {
+                redirectPath = "/dashboard";
+            }
+
+            router.push(redirectPath);
             router.refresh();
         } else {
             setError(result.error?.message || "Invalid credentials");

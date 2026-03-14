@@ -1,50 +1,5 @@
 {
   "node": {
-    "40812bf37ba4c49d70a4128dd4ecba2207aae44ef4": {
-      "workers": {
-        "app/[locale]/page": {
-          "moduleId": "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": true,
-          "exportedName": "syncCart",
-          "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
-        }
-      },
-      "layer": {
-        "app/[locale]/page": "action-browser"
-      },
-      "exportedName": "syncCart",
-      "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
-    },
-    "001b84be1ed70c9dba662ecfd09665d656ef1cc92d": {
-      "workers": {
-        "app/[locale]/page": {
-          "moduleId": "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": true,
-          "exportedName": "getCart",
-          "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
-        }
-      },
-      "layer": {
-        "app/[locale]/page": "action-browser"
-      },
-      "exportedName": "getCart",
-      "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
-    },
-    "4067ca44afd1ababfd7f3d9f65a6a5c1a408c9c549": {
-      "workers": {
-        "app/[locale]/page": {
-          "moduleId": "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": true,
-          "exportedName": "sendContactEmail",
-          "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts"
-        }
-      },
-      "layer": {
-        "app/[locale]/page": "action-browser"
-      },
-      "exportedName": "sendContactEmail",
-      "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts"
-    },
     "601c233ea5ccf1cbcbbcd4b916edc83b644b4258ce": {
       "workers": {
         "app/[locale]/page": {
@@ -89,6 +44,51 @@
       },
       "exportedName": "removeFromCartAction",
       "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
+    },
+    "40812bf37ba4c49d70a4128dd4ecba2207aae44ef4": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "syncCart",
+          "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "syncCart",
+      "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
+    },
+    "001b84be1ed70c9dba662ecfd09665d656ef1cc92d": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "getCart",
+          "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "getCart",
+      "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts"
+    },
+    "4067ca44afd1ababfd7f3d9f65a6a5c1a408c9c549": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/OneDrive/Desktop/Application/Cloza_Marketplace/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/cart/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/OneDrive/Desktop/Application/Cloza_Marketplace/src/features/catalog/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "sendContactEmail",
+          "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts"
+        }
+      },
+      "layer": {
+        "app/[locale]/page": "action-browser"
+      },
+      "exportedName": "sendContactEmail",
+      "filename": "OneDrive/Desktop/Application/Cloza_Marketplace/src/features/contact/actions/send-contact-email.ts"
     },
     "00104ac10c8d966279509e189e085e66cc2f9327e5": {
       "workers": {

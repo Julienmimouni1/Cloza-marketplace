@@ -139,7 +139,7 @@ export function CsvColumnMapper({ csvHeaders, onConfirm, onCancel }: CsvColumnMa
                   value={mapping[field.key] || ""}
                   onValueChange={(val) => handleMapChange(field.key, val)}
                 >
-                  <SelectTrigger id={`map-${field.key}`} className={!mapping[field.key] ? "border-red-200" : ""}>
+                  <SelectTrigger id={`map-${field.key}`} className={!mapping[field.key] ? "border-red-200 h-12" : "h-12"}>
                     <SelectValue placeholder={t("selectColumn")} />
                   </SelectTrigger>
                   <SelectContent>
@@ -167,7 +167,7 @@ export function CsvColumnMapper({ csvHeaders, onConfirm, onCancel }: CsvColumnMa
                   value={mapping[field.key] || "ignore"}
                   onValueChange={(val) => val === "ignore" ? handleMapChange(field.key, "") : handleMapChange(field.key, val)}
                 >
-                  <SelectTrigger id={`map-${field.key}`}>
+                  <SelectTrigger id={`map-${field.key}`} className="h-12">
                     <SelectValue placeholder={t("ignore")} />
                   </SelectTrigger>
                   <SelectContent>

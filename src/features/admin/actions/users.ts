@@ -3,6 +3,48 @@
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { revalidatePath } from "next/cache";
+import bcrypt from "bcryptjs";
+import { UserRole } from "@prisma/client";
+
+export async function createUser(data: {
+  name: string;
+  email: string;
+  password?: string;
+  role: UserRole;
+  companyName?: string;
+}) {
+  const session = await auth();
+  if (!session?.user || session.user.role !== "ADMIN") {
+    throw new Error("Unauthorized");
+  }
+
+  const existingUser = await prisma.user.findUnique({
+    where: { email: data.email.toLowerCase().trim() }
+  });
+
+  if (existingUser) {
+    throw new Error("USER_ALREADY_EXISTS");
+  }
+
+  // Hash password if provided, otherwise use a random one (for SSO/Manual invites)
+  const hashedPassword = data.password 
+    ? await bcrypt.hash(data.password, 10) 
+    : await bcrypt.hash(Math.random().toString(36).slice(-12), 10);
+
+  const user = await prisma.user.create({
+    data: {
+      name: data.name,
+      email: data.email.toLowerCase().trim(),
+      password: hashedPassword,
+      role: data.role,
+      companyName: data.companyName,
+      kybStatus: data.role === "VENDOR" ? "PENDING" : "APPROVED",
+    },
+  });
+
+  revalidatePath("/admin/users");
+  return { success: true, userId: user.id };
+}
 
 export async function getAllUsers(search?: string, role?: string) {
   const session = await auth();
