@@ -174,63 +174,63 @@ export function ProductTable({ products, totalCount, filters }: ProductTableProp
     <div className="space-y-4">
       {/* Selection Banner */}
       {(selectedIds.size > 0 || isSelectAllGlobal) && (
-        <div className="flex flex-col gap-2 p-4 bg-slate-50 border rounded-lg animate-in fade-in slide-in-from-top-2">
-          <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-3 p-4 bg-slate-50 border rounded-lg animate-in fade-in slide-in-from-top-2">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <span className="text-sm font-medium text-slate-700">
               {isSelectAllGlobal 
                 ? t("bulkActions.allSelected", { count: totalCount }) 
                 : t("bulkActions.selected", { count: selectedIds.size })}
             </span>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <Button
                 size="sm"
                 variant="outline"
                 onClick={() => handleBulkAction(ProductStatus.ACTIVE)}
                 disabled={isPending}
-                className="border-green-200 hover:bg-green-50 text-green-700"
+                className="flex-1 md:flex-none border-green-200 hover:bg-green-50 text-green-700"
               >
                 {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <CheckCircle2 className="mr-2 h-4 w-4" />}
-                {t("bulkActions.activate")}
+                <span className="hidden sm:inline">{t("bulkActions.activate")}</span>
               </Button>
               <Button
                 size="sm"
                 variant="outline"
                 onClick={() => handleBulkAction(ProductStatus.DRAFT)}
                 disabled={isPending}
-                className="border-gray-200 hover:bg-gray-50 text-gray-700"
+                className="flex-1 md:flex-none border-gray-200 hover:bg-gray-50 text-gray-700"
               >
                 {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <FileText className="mr-2 h-4 w-4" />}
-                {t("bulkActions.draft")}
+                <span className="hidden sm:inline">{t("bulkActions.draft")}</span>
               </Button>
               <Button
                 size="sm"
                 variant="outline"
                 onClick={() => handleBulkAction(ProductStatus.OUT_OF_STOCK)}
                 disabled={isPending}
-                className="border-red-200 hover:bg-red-50 text-red-700"
+                className="flex-1 md:flex-none border-red-200 hover:bg-red-50 text-red-700"
               >
                 {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Ban className="mr-2 h-4 w-4" />}
-                {t("bulkActions.outOfStock")}
+                <span className="hidden sm:inline">{t("bulkActions.outOfStock")}</span>
               </Button>
               <Button
                 size="sm"
                 variant="outline"
                 onClick={() => handleBulkAction(ProductStatus.ARCHIVED)}
                 disabled={isPending}
-                className="border-slate-200 hover:bg-slate-50 text-slate-700"
+                className="flex-1 md:flex-none border-slate-200 hover:bg-slate-50 text-slate-700"
               >
                 {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Archive className="mr-2 h-4 w-4" />}
-                {t("bulkActions.archive")}
+                <span className="hidden sm:inline">{t("bulkActions.archive")}</span>
               </Button>
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleBulkDelete}
                 disabled={isPending}
-                className="border-red-200 hover:bg-red-50 text-red-700"
+                className="flex-1 md:flex-none border-red-200 hover:bg-red-50 text-red-700"
               >
                 {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Trash2 className="mr-2 h-4 w-4" />}
-                {t("bulkActions.delete")}
+                <span className="hidden sm:inline">{t("bulkActions.delete")}</span>
               </Button>
             </div>
           </div>
@@ -267,73 +267,80 @@ export function ProductTable({ products, totalCount, filters }: ProductTableProp
         </div>
       )}
 
-      <div className="rounded-md border bg-white">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-[40px]">
-                <Checkbox
-                  checked={products.length > 0 && selectedIds.size === products.length}
-                  onCheckedChange={toggleSelectAllPage}
-                  aria-label={tc("all")}
-                />
-              </TableHead>
-              <TableHead className="w-[80px]">{t("image")}</TableHead>
-              <TableHead>{tc("name")}</TableHead>
-              <TableHead>{tc("sku")}</TableHead>
-              <TableHead>{tc("priceHt")}</TableHead>
-              <TableHead>{tc("stock")}</TableHead>
-              <TableHead>{tc("status")}</TableHead>
-              <TableHead className="w-[50px]"></TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {products.length === 0 ? (
+      <div className="rounded-md border bg-white overflow-hidden">
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader>
               <TableRow>
-                <TableCell colSpan={8} className="text-center h-24 text-gray-500">
-                  {t("noProductsFound")}
-                </TableCell>
+                <TableHead className="w-[40px]">
+                  <Checkbox
+                    checked={products.length > 0 && selectedIds.size === products.length}
+                    onCheckedChange={toggleSelectAllPage}
+                    aria-label={tc("all")}
+                  />
+                </TableHead>
+                <TableHead className="w-[80px]">{t("image")}</TableHead>
+                <TableHead className="min-w-[150px]">{tc("name")}</TableHead>
+                <TableHead className="hidden md:table-cell">{tc("sku")}</TableHead>
+                <TableHead>{tc("priceHt")}</TableHead>
+                <TableHead className="hidden sm:table-cell">{tc("stock")}</TableHead>
+                <TableHead className="hidden sm:table-cell">{tc("status")}</TableHead>
+                <TableHead className="w-[50px]"></TableHead>
               </TableRow>
-            ) : (
-              products.map((product) => {
-                const mainImage = product.images.find((img) => img.isMain) || product.images[0];
-                const isSelected = selectedIds.has(product.id);
+            </TableHeader>
+            <TableBody>
+              {products.length === 0 ? (
+                <TableRow>
+                  <TableCell colSpan={8} className="text-center h-24 text-gray-500">
+                    {t("noProductsFound")}
+                  </TableCell>
+                </TableRow>
+              ) : (
+                products.map((product) => {
+                  const mainImage = product.images.find((img) => img.isMain) || product.images[0];
+                  const isSelected = selectedIds.has(product.id);
 
-                return (
-                  <TableRow key={product.id} data-state={isSelected ? "selected" : undefined}>
-                    <TableCell>
-                      <Checkbox
-                        checked={isSelected}
-                        onCheckedChange={() => toggleSelect(product.id)}
-                        aria-label={`Sélectionner ${product.name}`}
-                      />
-                    </TableCell>
-                    <TableCell>
-                      <Avatar className="h-10 w-10 rounded-lg">
-                        <AvatarImage src={mainImage?.url || ""} alt={product.name} />
-                        <AvatarFallback className="rounded-lg">
-                          {product.name.substring(0, 2).toUpperCase()}
-                        </AvatarFallback>
-                      </Avatar>
-                    </TableCell>
-                    <TableCell className="font-medium">{product.name}</TableCell>
-                    <TableCell className="text-gray-500 text-sm">{product.sku}</TableCell>
-                    <TableCell>{(product.priceHt / 100).toFixed(2)} €</TableCell>
-                    <TableCell>{product.stock}</TableCell>
-                    <TableCell>
-                      <Badge variant="outline" className={getStatusColor(product.status)}>
-                        {getStatusLabel(product.status)}
-                      </Badge>
-                    </TableCell>
-                    <TableCell>
-                      <ProductActions productId={product.id} />
-                    </TableCell>
-                  </TableRow>
-                );
-              })
-            )}
-          </TableBody>
-        </Table>
+                  return (
+                    <TableRow key={product.id} data-state={isSelected ? "selected" : undefined}>
+                      <TableCell>
+                        <Checkbox
+                          checked={isSelected}
+                          onCheckedChange={() => toggleSelect(product.id)}
+                          aria-label={`Sélectionner ${product.name}`}
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <Avatar className="h-10 w-10 rounded-lg">
+                          <AvatarImage src={mainImage?.url || ""} alt={product.name} />
+                          <AvatarFallback className="rounded-lg">
+                            {product.name.substring(0, 2).toUpperCase()}
+                          </AvatarFallback>
+                        </Avatar>
+                      </TableCell>
+                      <TableCell className="font-medium">
+                        <div className="flex flex-col">
+                          <span>{product.name}</span>
+                          <span className="text-xs text-slate-500 md:hidden">{product.sku}</span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-gray-500 text-sm hidden md:table-cell">{product.sku}</TableCell>
+                      <TableCell>{(product.priceHt / 100).toFixed(2)} €</TableCell>
+                      <TableCell className="hidden sm:table-cell">{product.stock}</TableCell>
+                      <TableCell className="hidden sm:table-cell">
+                        <Badge variant="outline" className={getStatusColor(product.status)}>
+                          {getStatusLabel(product.status)}
+                        </Badge>
+                      </TableCell>
+                      <TableCell>
+                        <ProductActions productId={product.id} />
+                      </TableCell>
+                    </TableRow>
+                  );
+                })
+              )}
+            </TableBody>
+          </Table>
+        </div>
       </div>
     </div>
   );

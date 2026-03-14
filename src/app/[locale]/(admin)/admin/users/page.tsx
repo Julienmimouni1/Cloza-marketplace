@@ -46,32 +46,34 @@ export default async function AdminUsersPage({
   ];
 
   return (
-    <div className="space-y-8">
-      <div className="flex justify-between items-end">
+    <div className="space-y-6 md:space-y-8">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
         <div>
-          <h1 className="font-serif text-4xl font-black mb-2 text-black">{t("title")}</h1>
-          <p className="text-zinc-700 font-bold text-lg">{t("subtitle")}</p>
+          <h1 className="font-serif text-3xl md:text-4xl font-black mb-2 text-black">{t("title")}</h1>
+          <p className="text-zinc-700 font-bold text-base md:text-lg">{t("subtitle")}</p>
         </div>
-        <Button className="rounded-none bg-black hover:bg-zinc-800 h-12 px-6 font-bold text-base">
-          <UserPlus className="mr-2 h-5 w-5" /> {t("addUser")}
+        <Button asChild className="rounded-none bg-black hover:bg-zinc-800 h-14 md:h-12 w-full md:w-auto px-6 font-bold text-base shadow-xl">
+          <Link href="/admin/users/new">
+            <UserPlus className="mr-2 h-5 w-5" /> {t("addUser")}
+          </Link>
         </Button>
       </div>
 
       <div className="flex flex-col gap-6">
         <Tabs defaultValue={role} className="w-full">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
-            <TabsList className="h-auto p-0 bg-transparent border-b-2 border-zinc-200 rounded-none w-full md:w-auto justify-start">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-2 md:mb-6">
+            <TabsList className="h-auto p-0 bg-transparent border-b-2 border-zinc-200 rounded-none w-full md:w-auto justify-start overflow-x-auto overflow-y-hidden flex-nowrap scrollbar-hide no-scrollbar">
               {roles.map((r) => (
                 <TabsTrigger
                   key={r.id}
                   value={r.id}
-                  className="rounded-none border-b-4 border-transparent px-6 py-4 font-serif text-lg font-bold data-[state=active]:border-black data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-black text-zinc-500"
+                  className="rounded-none border-b-4 border-transparent px-4 md:px-6 py-4 font-serif text-base md:text-lg font-bold data-[state=active]:border-black data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:text-black text-zinc-500 whitespace-nowrap"
                   asChild
                 >
                   <Link href={`/admin/users?role=${r.id}${q ? `&q=${q}` : ""}`}>
-                    <r.icon className="mr-3 h-5 w-5" />
+                    <r.icon className="mr-2 md:mr-3 h-5 w-5 shrink-0" />
                     {r.label}
-                    <span className="ml-3 px-2 py-1 text-xs bg-zinc-100 text-zinc-900 font-sans font-black border border-zinc-200">
+                    <span className="ml-2 md:ml-3 px-2 py-1 text-[10px] md:text-xs bg-zinc-100 text-zinc-900 font-sans font-black border border-zinc-200">
                       {r.count}
                     </span>
                   </Link>
@@ -85,7 +87,7 @@ export default async function AdminUsersPage({
                 <Input 
                   name="q"
                   placeholder={t("directory.searchPlaceholder")}
-                  className="pl-12 rounded-none border-zinc-300 focus-visible:ring-black h-14 text-base font-bold placeholder:text-zinc-400"
+                  className="pl-12 rounded-none border-zinc-300 focus-visible:ring-black h-14 text-base font-bold placeholder:text-zinc-400 shadow-sm"
                   defaultValue={q}
                 />
                 <input type="hidden" name="role" value={role} />
@@ -93,9 +95,10 @@ export default async function AdminUsersPage({
             </div>
           </div>
 
-          <Card className="rounded-none border-2 border-zinc-200 shadow-xl">
+          <Card className="rounded-none border-2 border-zinc-200 shadow-xl overflow-hidden">
             <CardContent className="p-0">
-              <div className="relative w-full overflow-auto">
+              {/* Desktop View */}
+              <div className="relative w-full overflow-auto hidden md:block">
                 <table className="w-full caption-bottom text-base font-sans">
                   <thead>
                     <tr className="border-b-2 border-zinc-200 bg-zinc-100">
@@ -191,6 +194,92 @@ export default async function AdminUsersPage({
                     )}
                   </tbody>
                 </table>
+              </div>
+
+              {/* Mobile View */}
+              <div className="md:hidden divide-y divide-zinc-100">
+                {users.length === 0 ? (
+                  <div className="p-12 text-center text-zinc-600 font-bold italic font-serif bg-zinc-50">{t("directory.noUsers")}</div>
+                ) : (
+                  users.map((user) => (
+                    <div key={user.id} className="p-5 space-y-4 bg-white hover:bg-zinc-50 transition-colors">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <div className="h-12 w-12 shrink-0 rounded-none bg-zinc-200 flex items-center justify-center text-sm font-black text-black border-2 border-zinc-300 shadow-sm">
+                            {user.name?.charAt(0) || user.email.charAt(0).toUpperCase()}
+                          </div>
+                          <div className="min-w-0">
+                            <div className="font-black text-black text-lg flex items-center gap-1.5 truncate">
+                              {user.name || t("directory.anonymous")}
+                              {user.role === "ADMIN" && <ShieldCheck className="h-4 w-4 text-emerald-600 shrink-0" />}
+                            </div>
+                            <div className="text-sm text-zinc-700 font-bold truncate">
+                              {user.email}
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <Button variant="outline" className="h-12 w-12 p-0 rounded-none border-2 border-zinc-200 bg-zinc-50">
+                              <MoreVertical className="h-5 w-5 text-black" />
+                            </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end" className="rounded-none border-4 border-black w-64 p-2 shadow-2xl font-sans">
+                            <DropdownMenuLabel className="text-xs font-black uppercase text-zinc-500 tracking-widest py-3 px-2 border-b-2 border-zinc-100 mb-1">{t("directory.userActions")}</DropdownMenuLabel>
+                            <DropdownMenuItem asChild className="cursor-pointer py-4 px-2 font-bold focus:bg-zinc-100 text-base">
+                              <Link href={`/admin/users/${user.id}`} className="flex items-center">
+                                <UserCog className="mr-3 h-5 w-5" /> {t("directory.viewDetails")}
+                              </Link>
+                            </DropdownMenuItem>
+                            <ImpersonateButton userId={user.id} userName={user.name || user.email} />
+                            <DropdownMenuSeparator className="bg-zinc-200 h-1" />
+                            <DropdownMenuItem className="text-red-700 cursor-pointer py-4 px-2 font-black focus:bg-red-50 focus:text-red-800 text-base">
+                              <Ban className="mr-3 h-5 w-5" /> {t("directory.banUser")}
+                            </DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        <span className={`inline-flex items-center px-3 py-1 text-[10px] font-black uppercase rounded-none border-2 ${
+                          user.role === "ADMIN" ? "border-emerald-600 bg-emerald-50 text-emerald-800" :
+                          user.role === "VENDOR" ? "border-amber-600 bg-amber-50 text-amber-900" :
+                          "border-zinc-400 bg-white text-zinc-900"
+                        }`}>
+                          {user.role === "VENDOR" ? "Brand" : user.role === "RETAILER" ? "Retailer" : user.role}
+                        </span>
+                        
+                        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-none border-2 bg-zinc-50 ${
+                          user.kybStatus === "APPROVED" ? "border-emerald-200 text-emerald-800" :
+                          user.kybStatus === "REJECTED" ? "border-red-200 text-red-800" :
+                          "border-amber-200 text-amber-800"
+                        }`}>
+                          <div className={`h-2 w-2 rounded-full ${
+                            user.kybStatus === "APPROVED" ? "bg-emerald-600" :
+                            user.kybStatus === "REJECTED" ? "bg-red-600" :
+                            "bg-amber-600"
+                          }`} />
+                          <span className="text-[10px] font-black uppercase tracking-widest">{user.kybStatus}</span>
+                        </div>
+                      </div>
+
+                      {user.companyName && (
+                        <div className="flex items-center gap-2 text-xs font-black text-zinc-900 bg-zinc-100 p-2 border border-zinc-200">
+                          <Store className="h-3.5 w-3.5" />
+                          <span className="uppercase truncate">{user.companyName}</span>
+                        </div>
+                      )}
+
+                      <div className="flex justify-between items-center text-[10px] font-bold text-zinc-500 pt-2 border-t border-zinc-100">
+                        <span className="uppercase tracking-widest">{t("directory.columns.joined")}</span>
+                        <span className="text-black font-black uppercase">
+                          {new Date(user.createdAt).toLocaleDateString(undefined, { day: '2-digit', month: 'short', year: 'numeric' })}
+                        </span>
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             </CardContent>
           </Card>

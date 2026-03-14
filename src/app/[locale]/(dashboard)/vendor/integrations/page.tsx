@@ -44,12 +44,14 @@ export default async function IntegrationsPage({
             Retour au dashboard
           </Link>
         </Button>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
           <div>
-            <h1 className="text-2xl font-bold">Intégrations & Connecteurs</h1>
-            <p className="text-muted-foreground">Connectez vos boutiques externes pour synchroniser vos produits.</p>
+            <h1 className="text-2xl font-bold text-slate-900">Intégrations & Connecteurs</h1>
+            <p className="text-slate-500 text-sm">Connectez vos boutiques externes pour synchroniser vos produits.</p>
           </div>
-          <AddIntegrationDialog />
+          <div className="w-full sm:w-auto">
+            <AddIntegrationDialog />
+          </div>
         </div>
       </div>
 

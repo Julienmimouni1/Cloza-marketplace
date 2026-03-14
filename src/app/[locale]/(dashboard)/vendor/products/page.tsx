@@ -68,11 +68,11 @@ export default async function VendorProductsPage({
             {t("backToDashboard")}
           </Link>
         </Button>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
           <h1 className="text-2xl font-bold">{t("title")}</h1>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <ProductImportModal />
-            <Button asChild>
+            <Button asChild className="flex-1 sm:flex-none">
               <Link href="/vendor/products/new">
                 <Plus className="mr-2 h-4 w-4" />
                 {t("addNew")}

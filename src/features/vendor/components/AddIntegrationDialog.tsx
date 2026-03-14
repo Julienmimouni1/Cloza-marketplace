@@ -87,7 +87,7 @@ export function AddIntegrationDialog() {
           <div className="space-y-2">
             <Label>Type de plateforme</Label>
             <Select value={type} onValueChange={(val: any) => setType(val)}>
-              <SelectTrigger>
+              <SelectTrigger className="h-12">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -106,10 +106,10 @@ export function AddIntegrationDialog() {
               <div className="space-y-2">
                 <Label>URL de la boutique</Label>
                 <div className="relative">
-                  <Store className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <Store className="absolute left-3 top-4 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="https://ma-boutique.com"
-                    className="pl-9"
+                    className="pl-9 h-12"
                     value={shopUrl}
                     onChange={(e) => setShopUrl(e.target.value)}
                     required
@@ -121,6 +121,7 @@ export function AddIntegrationDialog() {
                 <Label>Consumer Key</Label>
                 <Input
                   placeholder="ck_..."
+                  className="h-12"
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
                   required
@@ -131,14 +132,15 @@ export function AddIntegrationDialog() {
                 <Input
                   type="password"
                   placeholder="cs_..."
+                  className="h-12"
                   value={apiSecret}
                   onChange={(e) => setApiSecret(e.target.value)}
                   required
                 />
               </div>
 
-              <DialogFooter>
-                <Button type="submit" disabled={loading}>
+              <DialogFooter className="pt-4">
+                <Button type="submit" disabled={loading} className="w-full h-12 sm:h-10">
                   {loading ? "Connexion..." : "Connecter WooCommerce"}
                 </Button>
               </DialogFooter>

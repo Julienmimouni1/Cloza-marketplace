@@ -88,23 +88,32 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         if (parsedCredentials.success) {
           const { email, password } = parsedCredentials.data;
+          const normalizedEmail = email.toLowerCase().trim();
+          
           try {
-            const user = await prisma.user.findUnique({ where: { email } });
-            console.log("Utilisateur trouvé dans la DB :", !!user);
+            console.log("Auth: Recherche de l'utilisateur pour :", normalizedEmail);
+            const user = await prisma.user.findUnique({ where: { email: normalizedEmail } });
             
-            if (!user || !user.password) {
-              console.log("Échec : Utilisateur non trouvé ou sans mot de passe");
+            if (!user) {
+              console.log("Auth Échec : Utilisateur introuvable dans la DB");
+              return null;
+            }
+
+            if (!user.password) {
+              console.log("Auth Échec : Utilisateur sans mot de passe");
               return null;
             }
             
             const passwordsMatch = await bcrypt.compare(password, user.password);
-            console.log("Match du mot de passe :", passwordsMatch);
+            console.log("Auth: Comparaison mot de passe pour", normalizedEmail, ":", passwordsMatch ? "✅ OK" : "❌ ÉCHEC");
 
             if (passwordsMatch) return user;
           } catch (dbError) {
-            console.error("Erreur de connexion à la base de données pendant l'auth :", dbError);
+            console.error("Auth: Erreur critique base de données :", dbError);
             throw new Error("DB_CONNECTION_ERROR");
           }
+        } else {
+          console.log("Auth Échec : Validation Zod échouée", parsedCredentials.error.format());
         }
 
         console.log("Échec de la validation des champs ou mot de passe incorrect");

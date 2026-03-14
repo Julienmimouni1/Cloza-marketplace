@@ -117,16 +117,31 @@ export async function lookupSiretPublic(siret: string): Promise<ActionResponse<{
   }
 }
 
-export async function loginUser(values: { email: string; password: string }): Promise<ActionResponse<null>> {
+export async function loginUser(values: { email: string; password: string }): Promise<ActionResponse<{ role: string }>> {
+    console.log("Tentative loginUser action pour :", values.email);
     try {
-        await signIn("credentials", {
+        const authResult = await signIn("credentials", {
             email: values.email,
             password: values.password,
             redirect: false,
         });
-        return { success: true, data: null };
+
+        console.log("authResult après signIn :", authResult);
+
+        const user = await prisma.user.findUnique({
+          where: { email: values.email },
+          select: { role: true }
+        });
+
+        if (!user) {
+          console.log("User not found in action after successful signin?!");
+          return { success: false, error: { code: "NOT_FOUND", message: "Utilisateur introuvable" } };
+        }
+
+        console.log("Login réussi, rôle :", user.role);
+        return { success: true, data: { role: user.role } };
     } catch (error) {
-        console.error("Login Error Details:", error);
+        console.error("Login Error Details in action:", error);
         if (error instanceof AuthError) {
              switch (error.type) {
                 case "CredentialsSignin":
