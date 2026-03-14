@@ -40,6 +40,12 @@ const Header = async () => {
             {!session ? (
               <div className="flex items-center gap-1.5 xl:gap-3">
                 <Link
+                  href="/login"
+                  className="text-xs font-bold uppercase tracking-wider text-zinc-500 hover:text-zinc-900 px-2 transition-colors"
+                >
+                  {t('signIn')}
+                </Link>
+                <Link
                   href="/register?role=retailer"
                   className="hidden xl:flex items-center text-xs font-bold uppercase tracking-wider text-zinc-700 hover:text-zinc-900 border border-zinc-200 bg-white hover:bg-zinc-50 px-4 py-2 rounded-full transition-all whitespace-nowrap"
                 >
@@ -81,7 +87,7 @@ const Header = async () => {
 
             <LanguageSwitcher initialLocale={locale} />
             <CartIndicator />
-            <MobileNav />
+            <MobileNav session={session} />
           </div>
         </div>
 
