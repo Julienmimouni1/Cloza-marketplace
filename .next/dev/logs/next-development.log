@@ -1715,3 +1715,27 @@
 [00:28:29.064] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
 [00:28:29.161] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
 [00:28:29.162] Server  LOG     Session: vendorId trouvé : null
+[00:32:16.838] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:32:17.489] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:32:17.490] Server  LOG     Session: vendorId trouvé : null
+[00:32:17.518] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:32:17.612] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:32:17.613] Server  LOG     Session: vendorId trouvé : null
+[00:32:28.679] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:32:29.336] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:32:29.337] Server  LOG     Session: vendorId trouvé : null
+[00:32:29.356] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:32:29.450] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:32:29.451] Server  LOG     Session: vendorId trouvé : null
+[00:33:05.693] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:33:06.343] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:33:06.344] Server  LOG     Session: vendorId trouvé : null
+[00:33:06.363] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:33:06.457] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:33:06.458] Server  LOG     Session: vendorId trouvé : null
+[00:33:07.118] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:33:07.208] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:33:07.209] Server  LOG     Session: vendorId trouvé : null
+[00:33:07.227] Server  LOG     Session: Recherche du vendorId pour l'utilisateur "cmmqd67fc0000p8i9apk2alxv"
+[00:33:07.320] Server  LOG     prisma:query "SELECT \"public\".\"Vendor\".\"id\" FROM \"public\".\"Vendor\" WHERE (\"public\".\"Vendor\".\"userId\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[00:33:07.321] Server  LOG     Session: vendorId trouvé : null
